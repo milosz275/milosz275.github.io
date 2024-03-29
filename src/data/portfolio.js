@@ -23,14 +23,14 @@ export default [
     {
         title: "Battleship console game",
         description: "Battleship console game built with C++. The game allows players to play against each other or against a bot. The bot uses a simple algorithm to make decisions.",
-        stack: ["C++"],
+        stack: ["C++", "Ai"],
         imgUrl: "https://raw.githubusercontent.com/mldxo/mldxo/main/src/battleship.png",
         link: "https://github.com/mldxo/battleship-console-game"
     },
     {
         title: "RSA Generation/Encryption",
         description: "Simple RSA key generation and encryption/decryption application built with C++. The application allows users to generate RSA keys and encrypt/decrypt messages.",
-        stack: ["C++", "GMP"],
+        stack: ["C++", "libgmp"],
         imgUrl: "https://raw.githubusercontent.com/mldxo/mldxo/main/src/rsa.png",
         link: "https://github.com/mldxo/rsa-keygen"
     },
@@ -44,14 +44,14 @@ export default [
     {
         title: "Dining Philosophers Problem",
         description: "Python implementation of simulation of the dining philosophers problem. The simulation optimizes the parameters of the problem to showcase the most efficient solution.",
-        stack: ["Python"],
+        stack: ["Python", "sync"],
         imgUrl: "",
         link: "https://github.com/mldxo/dining-philosophers"
     },
     {
         title: "Python Package Template",
         description: "Python package template that can be used to create new Python packages. The template includes a setup.py file, a README.md file, and a LICENSE file. The template is ready to be published on PyPI.",
-        stack: ["Python"],
+        stack: ["Python", "PyPI"],
         imgUrl: "",
         link: "https://github.com/mldxo/python-package-template"
     },
