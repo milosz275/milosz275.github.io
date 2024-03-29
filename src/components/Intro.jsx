@@ -6,7 +6,7 @@ function Intro() {
         <h1 className="text-4xl md:text-5xl dark:text-white mb-1 md:mb-3 font-bold select-none">
             Miłosz Maculewicz
         </h1>
-        <p className="text-base md:text-xl mb-3 font-light drop-shadow-md select-none">
+        <p className="text-base md:text-xl mb-3 font-light drop-shadow-dark dark:drop-shadow-light select-none">
             Software Developer
         </p>
         <p className="text-sm max-w-xl mb-6 font-normal">
@@ -16,7 +16,7 @@ function Intro() {
             <a
               target="_blank"
               href="https://github.com/mldxo/uav-collision-avoidance"
-              className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-red-600"
+              className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400 dark:decoration-orange-400"
               rel="noreferrer noopener">
               UAV collision avoidance
             </a>
