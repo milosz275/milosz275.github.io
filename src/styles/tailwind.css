@@ -1,0 +1,48 @@
+@tailwind base;
+
+:root {
+    --primary: rgb(52, 48, 61, 0.95);
+    --secondary: rgb(13, 17, 23, 0.95);
+}
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+    word-break: break-word;
+}
+
+::selection {
+    color: rgb(50, 70, 90, 0.55);
+    background: rgb(20, 60, 80, 0.25);
+}
+
+/* Scrollbar styles */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+}
+
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: hsl(var(--p));
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--s));
+    border-radius: 14px;
+    border: 3px solid hsl(var(--p));
+}
+
+@tailwind components;
+@tailwind utilities;
