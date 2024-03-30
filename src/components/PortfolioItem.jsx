@@ -14,7 +14,7 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-green-100 md:dark:hover:bg-github lg:hover:bg-green-100 lg:dark:hover:bg-github">
+      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github">
         <div className="w-full p-4 mt-3">
           <div className="flex flex-col w-full h-40">
             <h3 className="h-full text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold select-none">
