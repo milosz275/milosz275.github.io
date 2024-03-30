@@ -67,7 +67,7 @@ function App() {
 		<button
 			type="button"
 			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-5 top-4 bg-github dark:bg-green-200 text-lg p-1 rounded-md">
+			className="fixed p-2 z-10 right-5 top-4 bg-github hover:bg-github/[.825] dark:bg-green-200 hover:dark:bg-green-300 text-lg p-1 rounded-md">
 			{theme === 'dark' ? sun : moon}
 		</button>
 		<div className="bg-fixed bg-cover bg-full bg-rainforest-light dark:bg-rainforest-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
