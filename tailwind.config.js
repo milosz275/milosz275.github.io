@@ -16,8 +16,8 @@ export default {
         "accent": "1e91ea",
       },
       backgroundImage: {
-        "rainforest-light": "linear-gradient(to right bottom, rgba(200, 230, 220, 0.9), rgba(200, 210, 220, 0.9)), url('/public/assets/rainforest.jpg')",
-        "rainforest-dark": "linear-gradient(to right bottom, rgba(30, 20, 30, 0.9), rgba(20, 30, 30, 0.9)), url('/public/assets/rainforest.jpg')",
+        "rainforest-light": "linear-gradient(to right bottom, rgba(200, 230, 220, 0.9), rgba(200, 210, 220, 0.9)), url('/assets/rainforest.jpg')",
+        "rainforest-dark": "linear-gradient(to right bottom, rgba(30, 20, 30, 0.9), rgba(20, 30, 30, 0.9)), url('/assets/rainforest.jpg')",
       },
       dropShadow: {
         'dark': '0 15px 15px rgba(40, 40, 40, 1.0)',
