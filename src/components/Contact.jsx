@@ -29,7 +29,7 @@ function Contact() {
           <button
             type="submit"
             id="submit"
-            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-green-400 hover:to-blue-600">
+            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-green-400 hover:to-blue-600 select-none">
             Work With Me
           </button>
         </form>
