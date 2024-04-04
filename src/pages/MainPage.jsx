@@ -72,11 +72,21 @@ function MainPage() {
 		</button>
 		<div className="bg-fixed bg-cover bg-full bg-rainforest-light dark:bg-rainforest-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
-				<Intro />
-				<Portfolio />
-				<Timeline />
-				<Contact />
-				<Footer />
+				<div id="intro">
+					<Intro />
+				</div>
+				<div id="portfolio">
+					<Portfolio />
+				</div>
+				<div id="timeline">
+					<Timeline />
+				</div>
+				<div id="contact">
+					<Contact />
+				</div>
+				<div id="footer">
+					<Footer />
+				</div>
 			</div>
 		</div>
 </>
