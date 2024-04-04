@@ -8,15 +8,20 @@ PortfolioItem.propTypes = {
   link: PropTypes.string.isRequired,
 };
 
+const handleClick = (myLink) => () => {
+  window.location.href=myLink;
+}
+
 function PortfolioItem({title, description, imgUrl, stack, link}) {
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github">
-        <div className="w-full p-4 mt-3">
-          <div className="flex flex-col w-full h-40">
+    <div
+      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 \
+      md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
+      md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
+      lg:ease-in-out lg:hover:scale-105 lg:dark:hover:scale-105"
+      onClick={handleClick(link)}>
+        <div className="w-full p-4 mt-3 cursor-pointer" onClick={handleClick(link)}>
+          <div className="flex flex-col w-full h-40"  onClick={handleClick(link)}>
             <h3 className="h-full text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold select-none">
               {title}
             </h3>
@@ -38,8 +43,7 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
             </p>
           </div>
         </div>
-        
-    </a>
+    </div>
   );
 }
 
