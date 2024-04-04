@@ -20,7 +20,7 @@ function Intro() {
               rel="noreferrer noopener">
               UAV collision avoidance
             </a>
-            &nbsp;simulation problem for my bachelor&apos;s thesis.
+            &nbsp;simulation problem for my Bachelor&apos;s thesis.
         </p>
     </div>
   );
