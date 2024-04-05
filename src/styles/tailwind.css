@@ -15,8 +15,7 @@ html {
 }
 
 ::selection {
-    color: rgb(50, 70, 90, 0.55);
-    background: rgb(20, 60, 80, 0.25);
+    background: rgba(95, 105, 107, 0.5);
 }
 
 /* Scrollbar styles */
