@@ -8,8 +8,8 @@ PortfolioItem.propTypes = {
   link: PropTypes.string.isRequired,
 };
 
-const handleClick = (myLink) => () => {
-  window.location.href=myLink;
+const handleClick = (link) => () => {
+  window.open(link, '_blank');
 }
 
 function PortfolioItem({title, description, imgUrl, stack, link}) {
