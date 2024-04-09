@@ -8,6 +8,8 @@ function Footer() {
 						<div className="flex flex-wrap justify-center gap-2">
 							<a 
 								href="https://www.linkedin.com/in/mi%C5%82osz-maculewicz-894618277/"
+								target="_blank"
+								rel="noreferrer"
 								className="bg-stone-400 hover:bg-stone-600 dark:bg-stone-600 dark:hover:bg-github p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								className="w-5 h-5 fill-current"
@@ -21,6 +23,8 @@ function Footer() {
 							</a>
 							<a 
 								href="https://github.com/mldxo"
+								target="_blank"
+								rel="noreferrer"
 								className="bg-stone-400 hover:bg-stone-600 dark:bg-stone-600 dark:hover:bg-github/[.6] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								xmlns="http://www.w3.org/2000/svg"
