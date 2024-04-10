@@ -4,29 +4,34 @@ import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import {setCookie} from "../functions/setCookie";
+import {getCookie} from "../functions/getCookie";
 
 function MainPage() {
 	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
-		} else {
-			setTheme('light');
+		const darkThemeCookie = getCookie("dark-theme");
+		if (darkThemeCookie) {
+			setTheme(darkThemeCookie === "true" ? "dark" : "light");
+		}
+		else {
+			setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 		}
 	}, []);
 
-	const handleThemeSwitch = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark');
-	};
-
 	useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
+		if (theme === "dark") {
+			document.documentElement.classList.add("dark");
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove("dark");
 		}
 	}, [theme]);
+	
+	const handleThemeSwitch = () => {
+		setTheme(theme === "dark" ? "light" : "dark");
+		setCookie("dark-theme", theme === "dark" ? "false" : "true");
+	};
 
 	const sun = (
 		<svg
@@ -68,7 +73,7 @@ function MainPage() {
 			type="button"
 			onClick={handleThemeSwitch}
 			className="fixed p-2 z-10 right-5 top-4 bg-github hover:bg-github/[.825] dark:bg-green-200 hover:dark:bg-green-300 text-lg p-1 rounded-md">
-			{theme === 'dark' ? sun : moon}
+			{theme === "dark" ? sun : moon}
 		</button>
 		<div className="bg-fixed bg-cover bg-full bg-rainforest-light dark:bg-rainforest-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
