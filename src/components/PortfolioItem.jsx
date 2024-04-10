@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -9,7 +9,7 @@ PortfolioItem.propTypes = {
 };
 
 const handleClick = (link) => () => {
-  window.open(link, '_blank');
+  window.open(link, "_blank");
 }
 
 function PortfolioItem({title, description, imgUrl, stack, link}) {
