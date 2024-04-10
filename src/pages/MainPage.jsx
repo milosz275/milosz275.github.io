@@ -1,14 +1,19 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Intro from "../components/Intro";
 import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import {setCookie} from "../functions/setCookie";
-import {getCookie} from "../functions/getCookie";
+import { setCookie } from "../functions/setCookie";
+import { getCookie } from "../functions/getCookie";
+import { googleAnalytics } from "../functions/googleAnalytics";
 
 function MainPage() {
 	const [theme, setTheme] = useState(null);
+
+	useEffect(() => {
+		googleAnalytics();
+	} ,[]);
 
 	useEffect(() => {
 		const darkThemeCookie = getCookie("dark-theme");
