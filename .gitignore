@@ -25,3 +25,6 @@ dist-ssr
 
 # Notes
 .notes
+
+# Google Analytics
+googleAnalytics.jsx
