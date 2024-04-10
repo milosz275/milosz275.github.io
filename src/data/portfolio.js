@@ -64,7 +64,7 @@ export default [
     },
     {
         title: "mldxo.github.io",
-        description: "This minimal portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience.",
+        description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience.",
         stack: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
         imgUrl: "/assets/portfolio.png",
         link: "https://github.com/mldxo/mldxo.github.io"
