@@ -6,14 +6,14 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { setCookie } from "../functions/setCookie";
 import { getCookie } from "../functions/getCookie";
-// import { googleAnalytics } from "../functions/googleAnalytics";
+import { googleAnalytics } from "../functions/googleAnalytics";
 
 function MainPage() {
 	const [theme, setTheme] = useState(null);
 
-	// useEffect(() => {
-	// 	googleAnalytics();
-	// } ,[]);
+	useEffect(() => {
+		googleAnalytics();
+	} ,[]);
 
 	useEffect(() => {
 		const darkThemeCookie = getCookie("dark-theme");
