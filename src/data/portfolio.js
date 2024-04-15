@@ -36,7 +36,7 @@ export default [
     },
     {
         title: "Classification Methods Comparison",
-        description: "R/Jupyter Notebook implementation of a comparison of classification methods. The comparison includes the k-NN, SVM, and Random Forest algorithms. The comparison is based on the accuracy of the algorithms on a few dataset",
+        description: "R/Jupyter Notebook implementation of a comparison of classification methods. The comparison includes the k-NN, SVM, and Random Forest algorithms. The comparison is based on the accuracy of the algorithms on following datasets: Iris, Penguins and Hawks",
         stack: ["R", "Jupyter Notebook"],
         imgUrl: "/assets/classification.png",
         link: "https://github.com/mldxo/classification-methods-comparison"
