@@ -50,7 +50,7 @@ export default [
     },
     {
         title: "Python Package Template",
-        description: "Python package template that can be used to create new Python packages. The template includes a setup.py file, a README.md file, and a LICENSE file. The template is ready to be published on PyPI.",
+        description: "Python package template that can be used to create new Python packages. The template includes a pyproject.toml file, an expandable README.md, a MIT license and sample tests. The template is ready to be published on PyPI.",
         stack: ["Python", "PyPI"],
         imgUrl: "/assets/package.png",
         link: "https://github.com/mldxo/python-package-template"
