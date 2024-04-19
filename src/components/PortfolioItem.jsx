@@ -15,6 +15,7 @@ const handleClick = (link) => () => {
 function PortfolioItem({title, description, imgUrl, stack, link}) {
   return (
     <div
+      onMouseDown={handleClick(link)}
       className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 \
       md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
       md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
