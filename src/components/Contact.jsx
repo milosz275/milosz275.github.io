@@ -31,14 +31,14 @@ function Contact() {
         event.target.reset();
         setTimeout(() => {
           setResult("");
-        }, 10000);
+        }, 5000);
       }
       else {
         console.log("Error", data);
         setResult(data.message);
         setTimeout(() => {
           setResult("");
-        }, 10000);
+        }, 5000);
       }
   
       setName("");
@@ -82,7 +82,7 @@ function Contact() {
             className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-green-400 hover:to-blue-600 select-none">
             Work With Me
           </button>
-          <span className="text-left mt-4 text-sm text-gray-800 dark:text-gray-300">
+          <span className={`h-4 text-left mt-4 text-sm text-gray-800 dark:text-gray-300 transition-opacity duration-500 ease-in-out ${result ? 'opacity-100' : 'opacity-0'}`}>
             {result}
           </span>
         </form>
