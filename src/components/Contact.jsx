@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Title from "./Title";
 
 function Contact() {
+  const [result, setResult] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -13,19 +14,31 @@ function Contact() {
     }
     else {
       const formData = new FormData();
+      formData.append("access_key", "22f58b82-7f86-42ec-ab01-7a82cc4f63ab");
       formData.append("name", name);
       formData.append("email", email);
       formData.append("message", message);
   
-      const response = await fetch("https://getform.io/f/navvrgqa", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData
       });
+
+      const data = await response.json();
   
-      if (response.ok) {
-        alert("Your message has been sent successfully!");
-      } else {
-        alert("There was an error sending your message:( Please try again.");
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+        setTimeout(() => {
+          setResult("");
+        }, 10000);
+      }
+      else {
+        console.log("Error", data);
+        setResult(data.message);
+        setTimeout(() => {
+          setResult("");
+        }, 10000);
       }
   
       setName("");
@@ -69,6 +82,9 @@ function Contact() {
             className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-green-400 hover:to-blue-600 select-none">
             Work With Me
           </button>
+          <span className="text-left mt-4 text-sm text-gray-800 dark:text-gray-300">
+            {result}
+          </span>
         </form>
       </div>
     </div>
