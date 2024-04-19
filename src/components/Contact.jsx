@@ -53,7 +53,13 @@ function Contact() {
         <form
           id="submit-form"
           className="flex flex-col w-full md:w-7/12"
-          onSubmit={handleSubmit}>
+          onSubmit={handleSubmit}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              document.getElementById("submit").click();
+            }
+          }}>
           <Title>Contact</Title>
           <input
             type="text"
