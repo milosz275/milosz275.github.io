@@ -7,10 +7,24 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  function clearWithTransition(setValue, value) {
+    let i = value.length;
+    const intervalId = setInterval(() => {
+      if (i > 0) {
+        setValue(value.slice(0, --i));
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 15);
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (name === "" || email === "" || message === ""){
-      alert("All fields must be filled out");
+      setResult("All fields must be filled out");
+        setTimeout(() => {
+          setResult("");
+        }, 5000);
     }
     else {
       const formData = new FormData();
@@ -41,9 +55,9 @@ function Contact() {
         }, 5000);
       }
   
-      setName("");
-      setEmail("");
-      setMessage("");
+      clearWithTransition(setName, name);
+      clearWithTransition(setEmail, email);
+      clearWithTransition(setMessage, message);
     }
   };
 
