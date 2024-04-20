@@ -12,7 +12,8 @@ function Contact() {
     const intervalId = setInterval(() => {
       if (i > 0) {
         setValue(value.slice(0, --i));
-      } else {
+      }
+      else {
         clearInterval(intervalId);
       }
     }, 15);
@@ -20,7 +21,7 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (name === "" || email === "" || message === ""){
+    if (name === "" || email === "" || message === "") {
       setResult("All fields must be filled out");
         setTimeout(() => {
           setResult("");
