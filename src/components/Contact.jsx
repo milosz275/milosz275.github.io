@@ -82,21 +82,21 @@ function Contact() {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="placeholder-gray-500 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white" />
+            className={`placeholder-gray-500 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${name ? 'bg-white text-black' : 'bg-transparent'}`} />
           <input
             type="text"
             name="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="placeholder-gray-500 my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white" />
+            className={`placeholder-gray-500 my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${email ? 'bg-white text-black' : 'bg-transparent'}`} />
           <textarea
             name="message"
             placeholder="Message"
             rows="10"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="placeholder-gray-500 p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white" />
+            className={`placeholder-gray-500 p-2 mb-4 border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${message ? 'bg-white text-black' : 'bg-transparent'}`} />
           <button
             type="submit"
             id="submit"
