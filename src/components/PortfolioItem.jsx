@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
@@ -13,9 +13,42 @@ const handleClick = (link) => () => {
 }
 
 function PortfolioItem({title, description, imgUrl, stack, link}) {
+  const [isLoading, setIsLoading] = useState(false);
+  const timeoutId = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (window.innerWidth > 768) {
+      setIsLoading(true);
+      timeoutId.current = setTimeout(() => {
+        handleClick(link)();
+        setIsLoading(false);
+      }, 5000);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth > 768) {
+      setIsLoading(false);
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+        timeoutId.current = null;
+      }
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       onMouseDown={handleClick(link)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 \
       md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
       md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
@@ -43,6 +76,7 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
             </p>
           </div>
         </div>
+        <div className={`absolute h-1 p-0 mt-3 bottom-0 bg-blue-500 ease-linear ${isLoading ? 'w-full transition-width' : 'w-0'} ${!isLoading ? 'transition-width' : ''}`} style={{transitionDuration: isLoading ? '5000ms' : '0ms'}}></div>
     </div>
   );
 }
