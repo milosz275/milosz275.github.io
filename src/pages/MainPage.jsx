@@ -4,6 +4,7 @@ import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import CookieConsent from "react-cookie-consent";
 import { setCookie } from "../functions/setCookie";
 import { getCookie } from "../functions/getCookie";
 import { googleAnalytics } from "../functions/googleAnalytics";
@@ -96,6 +97,12 @@ function MainPage() {
 				</div>
 				<div id="footer">
 					<Footer />
+				</div>
+				<div id="cookie-consent">
+					<CookieConsent>
+						This website uses cookies to enhance the user experience.{" "}
+						<span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
+					</CookieConsent>
 				</div>
 			</div>
 		</div>
