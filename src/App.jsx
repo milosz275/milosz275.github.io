@@ -3,6 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage"
 import ErrorPage from "./pages/ErrorPage"
 import * as urls from "./urls";
+
+let docTitle = document.title;
+window.onfocus = () => {
+	document.title = docTitle;
+};
+window.onblur = () => {
+	document.title = "Miłosz Maculewicz";
+};
+
 class App extends React.Component {
 	constructor() {
 		super();
