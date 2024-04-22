@@ -46,7 +46,6 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
 
   return (
     <div
-      onMouseDown={handleClick(link)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 \
