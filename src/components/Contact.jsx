@@ -21,7 +21,13 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (name === "" || email === "" || message === "") {
+    if (!/^[\w-.]+@([\w-]+.)+[\w-]{2,4}$/.test(email)) {
+      setResult("Please enter a valid email")
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+    }
+    else if (name === "" || email === "" || message === "") {
       setResult("All fields must be filled out");
         setTimeout(() => {
           setResult("");
