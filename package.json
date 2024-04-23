@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build && shx cp dist/index.html dist/404.html",
+    "build": "vite build && shx cp dist/index.html dist/404.html && shx cp ads.txt dist/ads.txt  && shx cp robots.txt dist/robots.txt",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
