@@ -8,6 +8,8 @@ TimelineItem.propTypes = {
 };
 
 function TimelineItem({year, title, duration, details}) {
+  const lines = details.split("\n").filter((line, index, arr) => line || index < arr.length - 1);
+
   return (
     <ol className="flex flex-col md:flex-row relative border-l border-stone-500 dark:border-stone-700">
       <li className="mb-10 ml-4">
@@ -22,9 +24,11 @@ function TimelineItem({year, title, duration, details}) {
           <div className="my-1 text-sm font-normal leading-one text-stone-500 select-none dark:text-stone-500">
             {duration}
           </div>
-          <p className="my-2 text-base font-normal text-stone-700 dark:text-stone-400">
-            {details}
-          </p>
+          {lines.map((line, index) => (
+            <p key={index} className="my-2 text-base font-normal text-stone-700 dark:text-stone-400">
+              {line}
+            </p>
+          ))}
         </p>
       </li>
     </ol>
