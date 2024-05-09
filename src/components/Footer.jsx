@@ -7,7 +7,7 @@ function Footer() {
 					<div>
 						<div className="flex flex-wrap justify-center gap-2">
 							<a 
-								href="https://www.linkedin.com/in/mi%C5%82osz-maculewicz-894618277/"
+								href="https://www.linkedin.com/in/mi%C5%82osz-maculewicz/"
 								target="_blank"
 								rel="noreferrer"
 								className="bg-stone-400 hover:bg-stone-600 dark:bg-stone-600 dark:hover:bg-github p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
