@@ -3,9 +3,13 @@ import Title from "./Title";
 
 function Contact() {
   const [result, setResult] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState(localStorage.getItem("name") || "");
+  const [email, setEmail] = useState(localStorage.getItem("email") || "");
+  const [message, setMessage] = useState(localStorage.getItem("message") || "");
+
+  localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("message", message);
 
   function clearWithTransition(setValue, value) {
     let i = value.length;
@@ -34,37 +38,49 @@ function Contact() {
         }, 5000);
     }
     else {
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("message", message);
+
       const formData = new FormData();
       formData.append("access_key", "22f58b82-7f86-42ec-ab01-7a82cc4f63ab");
       formData.append("name", name);
       formData.append("email", email);
       formData.append("message", message);
-  
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
 
-      const data = await response.json();
-  
-      if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          setResult("Form Submitted Successfully");
+          event.target.reset();
+          clearWithTransition(setName, name);
+          clearWithTransition(setEmail, email);
+          clearWithTransition(setMessage, message);
+          setTimeout(() => {
+            setResult("");
+          }, 5000);
+        }
+        else {
+          console.log("Error", data);
+          setResult("Failed to submit form");
+          setTimeout(() => {
+            setResult("");
+          }, 5000);
+        }
+      }
+      catch (error) {
+        console.error("Error:", error);
+        setResult("Failed to submit form");
         setTimeout(() => {
           setResult("");
         }, 5000);
       }
-      else {
-        console.log("Error", data);
-        setResult(data.message);
-        setTimeout(() => {
-          setResult("");
-        }, 5000);
-      }
-  
-      clearWithTransition(setName, name);
-      clearWithTransition(setEmail, email);
-      clearWithTransition(setMessage, message);
     }
   };
 
