@@ -35,7 +35,7 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!/^[\w-.]+@([\w-]+.)+[\w-]{2,4}$/.test(email)) {
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
       setResult("Please enter a valid email")
       setTimeout(() => {
         setResult("");
