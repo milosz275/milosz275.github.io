@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 Title.propTypes = {
   children: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
@@ -16,4 +17,3 @@ function Title({children, id}) {
   }
   
   export default Title;
-  

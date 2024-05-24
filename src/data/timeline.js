@@ -4,7 +4,7 @@ export default [
         title: "Bachelor's Degree in Computer Science",
         duration: "3 years",
         details:
-            "I am pursuing a Bachelor's degree in Computer Science at Cardinal Stefan Wyszynki University, Warsaw. I have completed coursework in data structures, algorithms, and software engineering. I am dedicated to learning new technologies and improving my coding skills, currently focusing on my diploma work regarding UAV Collision Avoidance.",
+            "I am pursuing a Bachelor's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. I have completed coursework in data structures, algorithms, and software engineering. I am dedicated to learning new technologies and improving my coding skills, currently focusing on my diploma work regarding UAV Collision Avoidance.",
     },
     {
         year: "2023",

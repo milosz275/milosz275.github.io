@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-require('tailwindcss/colors')
+require("tailwindcss/colors")
 module.exports = {
     plugins: {
         tailwindcss: {},

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 TimelineItem.propTypes = {
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

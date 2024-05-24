@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -75,7 +76,7 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
             </p>
           </div>
         </div>
-        <div className={`absolute h-1 p-0 mt-3 bottom-0 bg-blue-500 ease-linear ${isLoading ? 'w-full transition-width' : 'w-0'} ${!isLoading ? 'transition-width' : ''}`} style={{transitionDuration: isLoading ? '5000ms' : '0ms'}}></div>
+        <div className={`absolute h-1 p-0 mt-3 bottom-0 bg-blue-500 ease-linear ${isLoading ? "w-full transition-width" : "w-0"} ${!isLoading ? "transition-width" : ""}`} style={{transitionDuration: isLoading ? "5000ms" : "0ms"}}></div>
     </div>
   );
 }
