@@ -22,6 +22,7 @@ function Intro() {
             </a>
             &nbsp;simulation problem for my Bachelor&apos;s thesis.
         </p>
+        <a href="https://wakatime.com/@54a5e85a-a806-4d39-bc8b-38523f717b15"><img src="https://wakatime.com/badge/user/54a5e85a-a806-4d39-bc8b-38523f717b15.svg" alt="Total time coded since May 27 2024" /></a>
     </div>
   );
 }
