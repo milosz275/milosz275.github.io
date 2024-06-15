@@ -8,20 +8,20 @@ export default [
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
     {
+        title: "RP Pico W Led Controller + Web Interface",
+        description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
+        timeInterval: ["June 2024", "July 2024"],
+        stack: ["C", "CMake", "CGI", "SSI", "pico-sdk", "JavaScript"],
+        imgUrl: "/assets/pico.png",
+        link: "https://github.com/mldxo/pico-led-controller"
+    },
+    {
         title: "Checkers game",
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
         stack: ["C++", "SFML", "Minimax", "Alpha-Beta Pruning", "Ai"],
         imgUrl: "/assets/checkers.png",
         link: "https://github.com/mldxo/checkers-gui"
-    },
-    {
-        title: "RP Pico W Led Controller + Web Interface",
-        description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
-        timeInterval: ["February 2023", "April 2023"],
-        stack: ["C", "CMake", "CGI", "SSI", "pico-sdk", "JavaScript"],
-        imgUrl: "/assets/pico.png",
-        link: "https://github.com/mldxo/pico-led-controller"
     },
     {
         title: "Qt Online Messenger",
