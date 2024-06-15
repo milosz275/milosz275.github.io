@@ -5,6 +5,7 @@ PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
+  timeInterval: PropTypes.array.isRequired,
   stack: PropTypes.array.isRequired,
   link: PropTypes.string.isRequired,
 };
@@ -13,7 +14,7 @@ const handleClick = (link) => () => {
   window.open(link, "_blank");
 }
 
-function PortfolioItem({title, description, imgUrl, stack, link}) {
+function PortfolioItem({title, description, timeInterval, imgUrl, stack, link}) {
   const [isLoading, setIsLoading] = useState(false);
   const timeoutId = useRef(null);
 
@@ -68,6 +69,11 @@ function PortfolioItem({title, description, imgUrl, stack, link}) {
               alt={title}
               className="w-full h-48 mb-4 object-cover object-center rounded-md border border-2 border-stone-900 dark:border-white"
             />
+            <div className="flex flex-row items-center justify-between pb-3">
+              <p className="text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none bg-emerald-100 dark:bg-emerald-950 p-1 border-2 border-stone-900 dark:border-gray-300 rounded-md">
+                {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
+              </p>
+            </div>
             <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
               {stack.map(item => (
                 <span className="inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-gray-300 rounded-md" key={item}>
