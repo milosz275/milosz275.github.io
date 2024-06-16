@@ -70,7 +70,7 @@ function PortfolioItem({title, description, timeInterval, imgUrl, stack, link}) 
               className="w-full h-48 mb-4 object-cover object-center rounded-md border border-2 border-stone-900 dark:border-white"
             />
             <div className="flex flex-row items-center justify-between pb-3">
-              <p className="text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none bg-emerald-100 dark:bg-emerald-950 p-1 border-2 border-stone-900 dark:border-gray-300 rounded-md">
+              <p className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
                 {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
               </p>
             </div>

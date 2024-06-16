@@ -76,7 +76,7 @@ function UAVPage() {
 			{theme === "dark" ? sun : moon}
 		</button>
 		<div className="bg-fixed bg-cover bg-full bg-rainforest-light dark:bg-rainforest-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter flex flex-col justify-center">
-    		<div className="max-w-5xl w-11/12 mx-auto text-center scrollable-text">
+			<div className="max-w-5xl w-11/12 mx-auto text-center scrollable-text">
 				Welcome to the UAV Collision Avoidance Simulation subpage. This page is a description of my Bachelor&apos;s thesis coding project part. The main goal of this project is to implement a geometric-approach-based collision detection and avoidance system for UAVs. The simulation is written in Python3 and uses the PySide6 library for visualization. The simulation is based on the concept of the Vector Sharing Resolution. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions.
 			</div>
 		</div>

@@ -66,7 +66,7 @@ export default [
     {
         title: "Python Package Template",
         description: "Python3 package template that can be used to create new PyPI packages. The template includes a pyproject.toml file, an expandable README.md, a MIT license and sample tests. The template is ready to be published on PyPI.",
-        timeInterval: ["February 2024", "March 2024"],
+        timeInterval: ["February 2024"],
         stack: ["Python", "PyPI"],
         imgUrl: "/assets/package.png",
         link: "https://github.com/mldxo/python-package-template"
