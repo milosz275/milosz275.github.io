@@ -13,6 +13,7 @@ function Portfolio() {
             description={project.description}
             imgUrl={project.imgUrl}
             timeInterval={project.timeInterval}
+            docsUrl={project.docsUrl}
             stack={project.stack}
             link={project.link}
           />
