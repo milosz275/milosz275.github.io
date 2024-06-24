@@ -6,6 +6,7 @@ PortfolioItem.propTypes = {
   description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   timeInterval: PropTypes.array.isRequired,
+  docsUrl: PropTypes.string.isRequired,
   stack: PropTypes.array.isRequired,
   link: PropTypes.string.isRequired,
 };
@@ -14,7 +15,7 @@ const handleClick = (link) => () => {
   window.open(link, "_blank");
 }
 
-function PortfolioItem({title, description, timeInterval, imgUrl, stack, link}) {
+function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack, link}) {
   const [isLoading, setIsLoading] = useState(false);
   const timeoutId = useRef(null);
 
@@ -73,6 +74,11 @@ function PortfolioItem({title, description, timeInterval, imgUrl, stack, link}) 
               <p className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
                 {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
               </p>
+              {docsUrl && (
+                <p onMouseDown={handleClick(docsUrl)} onClick={handleClick(docsUrl)} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
+                  Docs
+                </p>
+              )}
             </div>
             <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
               {stack.map(item => (
