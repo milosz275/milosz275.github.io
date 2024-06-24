@@ -67,7 +67,7 @@ export default [
         title: "Python Package Template",
         description: "Python3 package template that can be used to create new PyPI packages. The template includes a pyproject.toml file, an expandable README.md, a MIT license and sample tests. The template is ready to be published on PyPI.",
         timeInterval: ["February 2024"],
-        stack: ["Python", "PyPI"],
+        stack: ["Python3", "PyPI"],
         imgUrl: "/assets/package.png",
         link: "https://github.com/mldxo/python-package-template"
     },
@@ -75,7 +75,7 @@ export default [
         title: "Social Networking Platform",
         description: "Social networking platform built with React and Django. The platform allows users to create posts, add likes, comments and follow other users. The platform will also include a chat feature.",
         timeInterval: ["November 2023", "January 2024"],
-        stack: ["HTML", "CSS", "JavaScript", "React", "Python", "Django"],
+        stack: ["HTML", "CSS", "JavaScript", "React", "Python3", "Django"],
         imgUrl: "/assets/social.png",
         link: "https://github.com/himokkk/social-networking-platform"
     },
