@@ -94,7 +94,7 @@ export default [
         description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience.",
         timeInterval: ["April 2024", "May 2024"],
         docsUrl: "",
-        stack: ["HTML", "CSS", "JavaScript", "React", "Vue", "Tailwind CSS"],
+        stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
         imgUrl: "/assets/portfolio.png",
         link: "https://github.com/mldxo/mldxo.github.io"
     },
