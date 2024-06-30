@@ -103,7 +103,7 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
       md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
       lg:ease-in-out lg:hover:scale-105 lg:dark:hover:scale-105">
         <div className="w-full h-full p-4 mt-3 cursor-pointer">
-          <div className="flex flex-col w-full h-40" onClick={handleClick(link)}>
+          <div className="flex flex-col w-full h-40" onClick={handleClick(link)} onMouseDown={handleClick(link)}>
             <h3 className="h-full text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold select-none">
               {title}
             </h3>
@@ -113,22 +113,22 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
           </div>
           <div>
             <img
-              onClick={handleClick(link)}
+              onClick={handleClick(link)} onMouseDown={handleClick(link)}
               src={imgUrl}
               alt={title}
               className="w-full h-48 mb-4 object-cover object-center rounded-md border border-2 border-stone-900 dark:border-white"
             />
             <div className="flex flex-row items-center justify-between pb-3">
-              <p onClick={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
+              <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
                 {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
               </p>
               {docsUrl && (
-                <p onClick={handleClick(docsUrl)} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
+                <p onClick={handleClick(docsUrl)} onMouseDown={handleClick(docsUrl)} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
                   Docs
                 </p>
               )}
             </div>
-            <p onClick={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
+            <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
               {stack.map(item => (
                 <span className="inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-gray-300 rounded-md" key={item}>
                   {item}
@@ -137,7 +137,7 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
           </div>
         </div>
         <div className="relative pb-1 opacity-50">
-          <button onClick={handlePausePlayClick} className="absolute bottom-4 right-0 pause-play-btn">
+          <button onClick={handlePausePlayClick} onMouseDown={handlePausePlayClick} className="absolute bottom-4 right-0 pause-play-btn">
             {isPaused ? play : pause}
           </button>
         </div>
