@@ -2,12 +2,21 @@ export default [
     {
         title: "UAV Collision Avoidance",
         description: "UAV collision avoidance simulation built with Python3 and PyQt6. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions. The simulation is part of my Bachelor's thesis.",
-        timeInterval: ["December 2023", "July 2024"],
+        timeInterval: ["December 2023", "June 2024"],
         docsUrl: "https://github.com/mldxo/uav-collision-avoidance/tree/main/docs/en",
         stack: ["Python3", "PyQt6", "Geometric Algorithms", "matplotlib", "LaTeX"],
         imgUrl: "/assets/uav.png",
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
+    // {
+    //     title: "Secure Chat",
+    //     description: "Secure chat application built with C. The application allows users to communicate in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm. The application uses Cassandra as a database to store user data and the messages are end-to-end encrypted.",
+    //     timeInterval: ["June 2024", "August 2024"],
+    //     docsUrl: "https://mldxo.github.io/secure-chat",
+    //     stack: ["C", "CMake", "OpenSSL", "Diffie-Hellman","Cassandra","Nuklear"],
+    //     imgUrl: "/assets/secure-chat.png",
+    //     link: "https://github.com/mldxo/secure-chat"
+    // },
     {
         title: "RP Pico W Led Controller + Web Interface",
         description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
@@ -18,7 +27,7 @@ export default [
         link: "https://github.com/mldxo/pico-led-controller"
     },
     {
-        title: "Checkers game",
+        title: "Checkers Game",
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
         docsUrl: "https://mldxo.github.io/checkers-gui",
@@ -36,7 +45,7 @@ export default [
         link: "https://github.com/mldxo/qt-messenger"
     },
     {
-        title: "Battleship console game",
+        title: "Battleship CLI Game",
         description: "Battleship console game built with C++ allowing players to play against each other or against a bot. The bot uses a simple algorithm based on game's state to make decisions.",
         timeInterval: ["February 2023", "April 2023"],
         docsUrl: "",
@@ -91,7 +100,7 @@ export default [
     },
     {
         title: "mldxo.github.io",
-        description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience.",
+        description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience. Subpages are used in order to host documentation for my projects.",
         timeInterval: ["April 2024", "May 2024"],
         docsUrl: "",
         stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
