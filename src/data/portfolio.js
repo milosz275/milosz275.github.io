@@ -21,7 +21,7 @@ export default [
         title: "Checkers game",
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
-        docsUrl: "",
+        docsUrl: "https://mldxo.github.io/checkers-gui",
         stack: ["C++", "SFML", "Minimax", "Alpha-Beta Pruning", "Ai"],
         imgUrl: "/assets/checkers.png",
         link: "https://github.com/mldxo/checkers-gui"
@@ -94,7 +94,7 @@ export default [
         description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience.",
         timeInterval: ["April 2024", "May 2024"],
         docsUrl: "",
-        stack: ["HTML", "CSS", "JavaScript", "React", "Vue", "Tailwind CSS"],
+        stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
         imgUrl: "/assets/portfolio.png",
         link: "https://github.com/mldxo/mldxo.github.io"
     },
