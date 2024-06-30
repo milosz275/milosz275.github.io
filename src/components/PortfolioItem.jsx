@@ -22,6 +22,18 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
   const [isPaused, setIsPaused] = useState(false);
   const timeoutId = useRef(null);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleMouseEnter = () => {
     if (isPaused) {
       return;
@@ -137,9 +149,11 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
           </div>
         </div>
         <div className="relative pb-1 opacity-50">
-          <button onClick={handlePausePlayClick} onMouseDown={handlePausePlayClick} className="absolute bottom-4 right-0 pause-play-btn">
-            {isPaused ? play : pause}
-          </button>
+          {windowWidth > 768 && (
+            <button onClick={handlePausePlayClick} onMouseDown={handlePausePlayClick} className="absolute bottom-4 right-0 pause-play-btn">
+              {isPaused ? play : pause}
+            </button>
+          )}
         </div>
         <div className={
           `absolute h-1 p-0 mt-3 bottom-0
