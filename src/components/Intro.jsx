@@ -16,12 +16,12 @@ function Intro() {
             Currently, I&apos;m working on a&nbsp;
             <a
               target="_blank"
-              href="https://github.com/mldxo/uav-collision-avoidance"
+              href="https://github.com/mldxo/secure-chat"
               className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400 dark:decoration-orange-400"
               rel="noreferrer noopener">
-              UAV collision avoidance
+              Secure Chat
             </a>
-            &nbsp;simulation problem regarding implementation of geometric-approach-based collision detection and avoidance for my Bachelor&apos;s thesis.
+            &nbsp;project.
         </p>
         <div className="flex flex-row space-x-2">
           <a href="https://wakatime.com/@54a5e85a-a806-4d39-bc8b-38523f717b15"><img src="https://wakatime.com/badge/user/54a5e85a-a806-4d39-bc8b-38523f717b15.svg" alt="Total time coded since May 27 2024" className="hue-rotate"/></a>
