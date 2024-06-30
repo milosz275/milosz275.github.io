@@ -13,7 +13,7 @@ export default [
     //     description: "Secure chat application built with C. The application allows users to communicate in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm. The application uses Cassandra as a database to store user data and the messages are end-to-end encrypted.",
     //     timeInterval: ["June 2024", "August 2024"],
     //     docsUrl: "https://mldxo.github.io/secure-chat",
-    //     stack: ["C", "CMake", "OpenSSL", "Diffie-Hellman","Cassandra","Nuklear"],
+    //     stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
     //     imgUrl: "/assets/secure-chat.png",
     //     link: "https://github.com/mldxo/secure-chat"
     // },
@@ -22,7 +22,7 @@ export default [
         description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
         timeInterval: ["June 2024", "July 2024"],
         docsUrl: "https://mldxo.github.io/pico-led-controller",
-        stack: ["C", "CMake", "CGI", "SSI", "pico-sdk", "JavaScript"],
+        stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "JavaScript", "Doxygen"],
         imgUrl: "/assets/pico.png",
         link: "https://github.com/mldxo/pico-led-controller"
     },
@@ -31,7 +31,7 @@ export default [
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
         docsUrl: "https://mldxo.github.io/checkers-gui",
-        stack: ["C++", "SFML", "Minimax", "Alpha-Beta Pruning", "Ai"],
+        stack: ["C++", "Make", "SFML", "Minimax", "Alpha-Beta Pruning", "Doxygen"],
         imgUrl: "/assets/checkers.png",
         link: "https://github.com/mldxo/checkers-gui"
     },
@@ -49,7 +49,7 @@ export default [
         description: "Battleship console game built with C++ allowing players to play against each other or against a bot. The bot uses a simple algorithm based on game's state to make decisions.",
         timeInterval: ["February 2023", "April 2023"],
         docsUrl: "",
-        stack: ["C++", "Ai"],
+        stack: ["C++", "Make", "Ai"],
         imgUrl: "/assets/battleship.png",
         link: "https://github.com/mldxo/battleship-console-game"
     },
@@ -58,7 +58,7 @@ export default [
         description: "Simple RSA key generation and encryption/decryption application built with C++. The application allows users to generate and load RSA keys and then encrypt/decrypt messages.",
         timeInterval: ["March 2023", "May 2023"],
         docsUrl: "",
-        stack: ["C++", "libgmp"],
+        stack: ["C++", "Make", "libgmp"],
         imgUrl: "/assets/rsa.png",
         link: "https://github.com/mldxo/rsa-keygen"
     },
@@ -88,6 +88,15 @@ export default [
         stack: ["Python3", "PyPI"],
         imgUrl: "/assets/package.png",
         link: "https://github.com/mldxo/python-package-template"
+    },
+    {
+        title: "C/C++ Template",
+        description: "C/C++ template that can be used to create new projects. The template includes a Makefile, a README.md, a MIT license and sample tests. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
+        timeInterval: ["June 2024"],
+        docsUrl: "https://mldxo.github.io/c-cpp-template",
+        stack: ["C", "C++", "Make", "CMake", "Doxygen"],
+        imgUrl: "/assets/c-cpp.png",
+        link: "https://github.com/mldxo/c-cpp-template"
     },
     {
         title: "Social Networking Platform",
