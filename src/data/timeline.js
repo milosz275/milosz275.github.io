@@ -1,10 +1,17 @@
 export default [
+    // {
+    //     year: "Today",
+    //     title: "Master's Degree in Computer Science",
+    //     duration: "2 years",
+    //     details:
+    //         "Currently pursuing a Master's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. Enrolled in advanced coursework in artificial intelligence, machine learning, and data science. Focused on developing a deep understanding of algorithms and data structures, as well as exploring the latest trends in technology and programming.",
+    // },
     {
-        year: "Today",
+        year: "2024",
         title: "Bachelor's Degree in Computer Science",
         duration: "3 years",
         details:
-            "I am pursuing a Bachelor's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. I have completed coursework in data structures, algorithms, and software engineering. I am dedicated to learning new technologies and improving my coding skills, currently focusing on my diploma work regarding UAV Collision Avoidance.",
+            "I was pursuing a Bachelor's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. I have completed coursework in data structures, algorithms, and software engineering. I am dedicated new technology learner and on a daily basis trying to improve my coding skills and general knowledge in Computer Science.",
     },
     {
         year: "2023",
