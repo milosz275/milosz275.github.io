@@ -104,7 +104,7 @@ export default [
         timeInterval: ["April 2024", "May 2024"],
         docsUrl: "",
         stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
-        imgUrl: "/assets/portfolio.png",
+        imgUrl: "/assets/portfolio-dark.png",
         link: "https://github.com/mldxo/mldxo.github.io"
     },
 ]
