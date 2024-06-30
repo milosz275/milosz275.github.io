@@ -21,7 +21,7 @@ export default [
         title: "Checkers game",
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
-        docsUrl: "",
+        docsUrl: "https://mldxo.github.io/checkers-gui",
         stack: ["C++", "SFML", "Minimax", "Alpha-Beta Pruning", "Ai"],
         imgUrl: "/assets/checkers.png",
         link: "https://github.com/mldxo/checkers-gui"
