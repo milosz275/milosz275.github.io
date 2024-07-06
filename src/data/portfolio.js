@@ -8,15 +8,15 @@ export default [
         imgUrl: "/assets/uav.png",
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
-    // {
-    //     title: "Secure Chat",
-    //     description: "Secure chat application built with C. The application allows users to communicate in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm. The application uses Cassandra as a database to store user data and the messages are end-to-end encrypted.",
-    //     timeInterval: ["June 2024", "August 2024"],
-    //     docsUrl: "https://mldxo.github.io/secure-chat",
-    //     stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
-    //     imgUrl: "/assets/secure-chat.png",
-    //     link: "https://github.com/mldxo/secure-chat"
-    // },
+    {
+        title: "Secure Chat",
+        description: "Secure chat application built with C. The application allows users to communicate in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm. The application uses Cassandra as a database to store user data and the messages are end-to-end encrypted.",
+        timeInterval: ["June 2024", "August 2024"],
+        docsUrl: "https://mldxo.github.io/secure-chat",
+        stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
+        imgUrl: "/assets/secure-chat.png",
+        link: "https://github.com/mldxo/secure-chat"
+    },
     {
         title: "RP Pico W Led Controller + Web Interface",
         description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
