@@ -8,7 +8,7 @@ function Intro() {
             Miłosz Maculewicz
         </h1>
         <p className="text-base drop-shadow-dark dark:drop-shadow-light max-w-xl mb-6 font-normal">
-          Software Developer, System Administrator
+          Software Engineer, System Admin
         </p>
         <p className="text-sm max-w-xl mb-6 font-normal">
             I&apos;m a third-year Computer Science student with a strong background in software development and system administration.
