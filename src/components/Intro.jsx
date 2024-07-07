@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/rainbow.css";
 
 function Intro() {
   const [hasScrolled, setHasScrolled] = useState(false);
