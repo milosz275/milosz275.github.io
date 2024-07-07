@@ -19,7 +19,7 @@ const handleClick = (link) => () => {
 
 function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack, link}) {
   const [isLoading, setIsLoading] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   const timeoutId = useRef(null);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
