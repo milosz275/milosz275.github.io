@@ -4,7 +4,7 @@ export default [
         description: "UAV collision avoidance simulation built with Python3 and PyQt6. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions. The simulation is part of my Bachelor's thesis.",
         timeInterval: ["December 2023", "June 2024"],
         docsUrl: "https://github.com/mldxo/uav-collision-avoidance/tree/main/docs/en",
-        stack: ["Python3", "PyQt6", "Geometric Algorithms", "matplotlib", "LaTeX"],
+        stack: ["Python3", "Qt6", "Geometric Algorithms", "matplotlib", "Sphinx", "PyPI"],
         imgUrl: "/assets/uav.png",
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
@@ -22,7 +22,7 @@ export default [
         description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
         timeInterval: ["June 2024", "July 2024"],
         docsUrl: "https://mldxo.github.io/pico-led-controller",
-        stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "JavaScript", "Doxygen"],
+        stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "HTML", "CSS", "JavaScript", "Doxygen"],
         imgUrl: "/assets/pico.png",
         link: "https://github.com/mldxo/pico-led-controller"
     },
@@ -31,7 +31,7 @@ export default [
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
         docsUrl: "https://mldxo.github.io/checkers-gui",
-        stack: ["C++", "Make", "SFML", "Minimax", "Alpha-Beta Pruning", "Doxygen"],
+        stack: ["C++", "Make", "SFML", "Minimax", "Alpha-Beta Pruning", "Doxygen", "Ai"],
         imgUrl: "/assets/checkers.png",
         link: "https://github.com/mldxo/checkers-gui"
     },
@@ -76,7 +76,7 @@ export default [
         description: "Python implementation of simulation of the dining philosophers problem. The simulation optimizes the parameters of the problem to showcase the most efficient solution.",
         timeInterval: ["April 2024", "May 2024"],
         docsUrl: "",
-        stack: ["Python3", "matplotlib"],
+        stack: ["Python3", "matplotlib", "PyPI"],
         imgUrl: "/assets/philosophers.png",
         link: "https://github.com/mldxo/dining-philosophers"
     },
