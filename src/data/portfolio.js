@@ -36,6 +36,15 @@ export default [
         link: "https://github.com/mldxo/checkers-gui"
     },
     {
+        title: "Leetcode Solutions",
+        description: "Collection of solutions to Leetcode problems. C, C++ and Python are used. Repo present my approach to solving the problems and the urge to improve my coding skills.",
+        timeInterval: ["July 2024", "now"],
+        docsUrl: "https://mldxo.github.io/leetcode",
+        stack: ["C", "C++", "Make", "Python3", "Doxygen", "Sphinx"],
+        imgUrl: "/assets/leetcode.png",
+        link: "https://github.com/mldxo/leetcode"
+    },
+    {
         title: "Qt Online Messenger",
         description: "Application built with C++ and Qt6. The application allows users to send and receive messages between network users in real-time using Windows sockets.",
         timeInterval: ["February 2023", "April 2023"],
