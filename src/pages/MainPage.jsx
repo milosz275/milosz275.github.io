@@ -17,16 +17,6 @@ function MainPage() {
 	} ,[]);
 
 	useEffect(() => {
-		const hash = window.location.hash.slice(1);
-		if (hash) {
-			const element = document.getElementById(hash);
-			if (element) {
-				element.scrollIntoView({ behavior: 'smooth' });
-			}
-		}
-	}, []);
-
-	useEffect(() => {
 		const darkThemeCookie = getCookie("dark-theme");
 		if (darkThemeCookie) {
 			setTheme(darkThemeCookie === "true" ? "dark" : "light");

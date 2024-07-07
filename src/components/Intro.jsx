@@ -5,6 +5,16 @@ function Intro() {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
+		const hash = window.location.hash.slice(1);
+		if (hash) {
+			const element = document.getElementById(hash);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0 && !hasScrolled) {
         setHasScrolled(true);
