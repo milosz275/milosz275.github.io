@@ -36,10 +36,10 @@ function Intro() {
             Miłosz Maculewicz
         </h1>
         <p className="text-base dark:text-white max-w-xl mb-6 font-normal">
-          Software Engineer, System Admin
+          developer
         </p>
         <p className="text-sm dark:text-white max-w-xl mb-6 font-normal">
-            I&apos;m a third-year Computer Science student with a strong background in software development and system administration.
+            I&apos;m a fourth-year Computer Science student with a strong background in software development and system administration.
             I am proficient in multiple programming languages and have a keen interest in mastering OOP and structural programming.
             Currently, I&apos;m working on a <a href="https://github.com/mldxo/secure-chat" target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">Secure Chat</a> project.
         </p>
