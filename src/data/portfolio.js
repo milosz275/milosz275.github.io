@@ -4,7 +4,7 @@ export default [
         description: "UAV collision avoidance simulation built with Python3 and PyQt6. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions. The simulation is part of my Bachelor's thesis.",
         timeInterval: ["December 2023", "June 2024"],
         docsUrl: "https://github.com/mldxo/uav-collision-avoidance/tree/main/docs/en",
-        stack: ["Python3", "Qt6", "Geometric Algorithms", "matplotlib", "Sphinx", "PyPI"],
+        stack: ["Python3", "Qt6", "Geometric Algorithms", "matplotlib", "PyPI"],
         imgUrl: "/assets/uav.png",
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
@@ -40,7 +40,7 @@ export default [
         description: "Collection of solutions to Leetcode problems. C, C++ and Python are used. Repo present my approach to solving the problems and the urge to improve my coding skills.",
         timeInterval: ["July 2024", "now"],
         docsUrl: "https://mldxo.github.io/leetcode",
-        stack: ["C", "C++", "Make", "Python3", "Doxygen", "Sphinx"],
+        stack: ["C", "C++", "Make", "Python3", "Doxygen"],
         imgUrl: "/assets/leetcode.png",
         link: "https://github.com/mldxo/leetcode"
     },
