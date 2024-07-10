@@ -110,8 +110,8 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-200 \
-      md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
+      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-blue-150 \
+      md:dark:hover:bg-github lg:hover:bg-blue-150 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
       md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
       lg:ease-in-out lg:hover:scale-105 lg:dark:hover:scale-105">
         <div className="w-full h-full p-4 mt-3 cursor-pointer">
