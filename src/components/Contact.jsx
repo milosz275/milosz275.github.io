@@ -138,7 +138,7 @@ function Contact() {
           <button
             type="submit"
             id="submit"
-            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-green-400 hover:to-blue-600 select-none">
+            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">  
             Work With Me
           </button>
           <span className={`h-4 text-left mt-4 text-sm text-gray-800 dark:text-gray-300 transition-opacity duration-500 ease-in-out ${result ? "opacity-100" : "opacity-0"}`}>

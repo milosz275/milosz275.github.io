@@ -44,11 +44,11 @@ function Intro() {
             Currently, I&apos;m working on a <a href="https://github.com/mldxo/secure-chat" target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">Secure Chat</a> project.
         </p>
         <div className={`opacity-0 ${hasScrolled ? "opacity-100 translate-y-0" : "translate-y-10"} transition-opacity duration-700 ease-out`}>
-            <div className="flex flex-row space-x-2">
+            {/* <div className="flex flex-row space-x-2">
               <a href="https://wakatime.com/@54a5e85a-a806-4d39-bc8b-38523f717b15" target="_blank" rel="noreferrer noopener">
                 <img src="https://wakatime.com/badge/user/54a5e85a-a806-4d39-bc8b-38523f717b15.svg" alt="Total time coded since May 27 2024" className="hue-rotate"/>
               </a>
-            </div>
+            </div> */}
         </div>
     </div>
   );
