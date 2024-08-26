@@ -36,7 +36,7 @@ function Intro() {
             Miłosz Maculewicz
         </h1>
         <p className="text-base dark:text-white max-w-xl mb-6 font-normal">
-          developer
+          creative craftsman
         </p>
         <p className="text-sm dark:text-white max-w-xl mb-6 font-normal">
             I&apos;m a fourth-year Computer Science student with a strong background in software development and system administration.
