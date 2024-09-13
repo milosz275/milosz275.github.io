@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 PortfolioItem.propTypes = {
@@ -18,56 +18,14 @@ const handleClick = (link) => () => {
 }
 
 function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack, link}) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
   const timeoutId = useRef(null);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
+    const handleResize = () => {};
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleMouseEnter = () => {
-    if (isPaused) {
-      return;
-    }
-    if (window.innerWidth > 768) {
-      setIsLoading(true);
-      timeoutId.current = setTimeout(() => {
-        handleClick(link)();
-        setIsLoading(false);
-      }, 5000);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (isPaused) {
-      return;
-    }
-    if (window.innerWidth > 768) {
-      setIsLoading(false);
-      if (timeoutId.current) {
-        clearTimeout(timeoutId.current);
-        timeoutId.current = null;
-      }
-    }
-  };
-
-  const handlePausePlayClick = () => {
-    setIsPaused(!isPaused);
-    setIsLoading(isPaused);
-    if (timeoutId.current) {
-      clearTimeout(timeoutId.current);
-      timeoutId.current = null;
-    }
-  };
 
   useEffect(() => {
     return () => {
@@ -77,39 +35,8 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
     };
   }, []);
 
-  const play = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 36 36"
-      fill="#ffffff"
-      stroke="#000000"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-6 h-6">
-      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-    </svg>
-  );
-  
-  const pause = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 36 36"
-      fill="#ffffff"
-      stroke="#000000"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-6 h-6">
-        <rect x="6" y="4" width="4" height="16"></rect>
-        <rect x="14" y="4" width="4" height="16"></rect>
-      </svg>
-  );
-
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-100 \
       md:dark:hover:bg-github lg:hover:bg-slate-100 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
       md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
@@ -147,21 +74,6 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
                 </span>))}
             </p>
           </div>
-        </div>
-        <div className="relative pb-1 opacity-50">
-          {windowWidth > 768 && (
-            <button onClick={handlePausePlayClick} onMouseDown={handlePausePlayClick} className="absolute bottom-4 right-0 pause-play-btn">
-              {isPaused ? play : pause}
-            </button>
-          )}
-        </div>
-        <div className={
-          `absolute h-1 p-0 mt-3 bottom-0
-          bg-blue-500 ease-linear
-          ${isLoading ? "w-full transition-width" : "w-0"}
-          ${!isLoading ? "transition-width" : ""}`
-          }
-          style={{transitionDuration: isLoading ? "5000ms" : "0ms"}}>
         </div>
     </div>
   );
