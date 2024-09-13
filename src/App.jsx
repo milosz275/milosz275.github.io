@@ -32,6 +32,7 @@ class App extends React.Component {
 		React.createElement(Route, { path: urls.UAV_COLL_URL, element: React.createElement(UAVPage, {}) }),
 		React.createElement(Route, { path: urls.CHECKERS_URL, element: React.createElement(CheckersGamePage, {}) }),
 		React.createElement(Route, { path: urls.CHECKERS_GAME_URL, element: React.createElement(CheckersGamePage, {}) }),
+		React.createElement(Route, { path: "blog-app", element: null }),
 		React.createElement(Route, { path: "*", element: React.createElement(ErrorPage, {}), })
 		))));
 	}
