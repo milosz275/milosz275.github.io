@@ -1,0 +1,39 @@
+{
+    "short_name": "Portfolio",
+    "name": "Miłosz Maculewicz Portfolio",
+    "description": "This is my personal portfolio now available as a PWA.",
+    "icons": [
+      {
+        "src": "assets/m.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/m-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "id": "io.github.mldxo",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000",
+    "screenshots": [
+        {
+            "src": "assets/rainforest.jpg",
+            "sizes": "1024x1034",
+            "type": "image/jpg",
+            "form_factor": "wide",
+            "label": "Wonder Widgets"
+        },
+        {
+            "src": "assets/rainforest-hiva.jpg",
+            "sizes": "1020x812",
+            "type": "image/jpg",
+            "form_factor": "narrow",
+            "label": "Wonder Widgets"
+        }
+    ]
+}
