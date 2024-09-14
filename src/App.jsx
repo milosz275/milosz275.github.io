@@ -4,6 +4,7 @@ import MainPage from "./pages/MainPage"
 import UAVPage from "./pages/UAVPage"
 import CheckersGamePage from "./pages/CheckersGamePage"
 import ErrorPage from "./pages/ErrorPage"
+import PrivacyPage from "./pages/PrivacyPage"
 import * as urls from "./urls";
 
 let docTitle = document.title;
@@ -32,6 +33,7 @@ class App extends React.Component {
 					React.createElement(Route, { path: urls.UAV_COLL_URL, element: React.createElement(UAVPage, {}) }),
 					React.createElement(Route, { path: urls.CHECKERS_URL, element: React.createElement(CheckersGamePage, {}) }),
 					React.createElement(Route, { path: urls.CHECKERS_GAME_URL, element: React.createElement(CheckersGamePage, {}) }),
+					React.createElement(Route, { path: urls.PRIVACY_URL, element: React.createElement(PrivacyPage, {}) }),
 					React.createElement(Route, { path: "blog-app", element: null }),
 					React.createElement(Route, { path: "*", element: React.createElement(ErrorPage, {}), })
 				))));
