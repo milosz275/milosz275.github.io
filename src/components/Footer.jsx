@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import * as urls from "../urls";
 
 function Footer() {
+	const navigate = useNavigate();
+
 	return (
 		<div className="py-5 text-center">
 			<div className="container max-w-screen-lg mx-auto">
@@ -46,8 +50,11 @@ function Footer() {
 					</div>
 				</div>
 			</div>
-			<p className="text-sm mt-2  opacity-50" onClick={() => window.scrollTo(0, 0)}>
+			<p className="text-sm mt-2 cursor-pointer opacity-50 hover:opacity-40 transition-all duration-200" onClick={() => window.scrollTo(0, 0)}>
 				&copy; {new Date().getFullYear()} Miłosz Maculewicz. All rights reserved.
+			</p>
+			<p className="text-sm mt-2 cursor-pointer opacity-50 hover:opacity-40 transition-all duration-200" onClick={() => navigate(urls.PRIVACY_URL)}>
+				Clear Cookies
 			</p>
 		</div>
 	);
