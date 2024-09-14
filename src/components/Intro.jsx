@@ -41,7 +41,7 @@ function Intro() {
       <p className="text-sm dark:text-white max-w-xl mb-6 font-normal hover:scale-105 transition-all duration-200">
         I&apos;m a fourth-year Computer Science student with a strong background in software development and system administration.
         I am proficient in multiple programming languages and have a keen interest in mastering OOP and structural programming.
-        Currently, I&apos;m working on a <a href="https://github.com/mldxo/secure-chat" target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">Secure Chat</a> project.
+        Currently, I&apos;m working on a <a href="https://github.com/mldxo/blog-app" target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">Blog App</a> project.
       </p>
       <div className={`opacity-0 ${hasScrolled ? "opacity-100 translate-y-0" : "translate-y-10"} transition-opacity duration-700 ease-out`}>
         {/* <div className="flex flex-row space-x-2">
