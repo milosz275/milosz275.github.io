@@ -6,7 +6,7 @@ PortfolioItem.propTypes = {
   description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   timeInterval: PropTypes.array.isRequired,
-  docsUrl: PropTypes.string.isRequired,
+  docs: PropTypes.array.isRequired,
   stack: PropTypes.array.isRequired,
   link: PropTypes.string.isRequired,
 };
@@ -17,7 +17,7 @@ const handleClick = (link) => () => {
   }
 }
 
-function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack, link}) {
+function PortfolioItem({title, description, timeInterval, docs, imgUrl, stack, link}) {
   const timeoutId = useRef(null);
 
   useEffect(() => {
@@ -55,15 +55,15 @@ function PortfolioItem({title, description, timeInterval, docsUrl, imgUrl, stack
               onClick={handleClick(link)} onMouseDown={handleClick(link)}
               src={imgUrl}
               alt={title}
-              className="w-full h-48 mb-4 object-cover object-center rounded-md border border-2 border-stone-900 dark:border-white"
+              className="w-full h-48 mb-4 object-cover object-center rounded-md border-2 border-stone-900 dark:border-white"
             />
             <div className="flex flex-row items-center justify-between pb-3">
               <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
                 {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
               </p>
-              {docsUrl && (
-                <p onClick={handleClick(docsUrl)} onMouseDown={handleClick(docsUrl)} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
-                  Docs
+              {docs && docs.length >= 2 && (
+                <p onClick={handleClick(docs[1])} onMouseDown={handleClick(docs[1])} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
+                  {docs[0]}
                 </p>
               )}
             </div>

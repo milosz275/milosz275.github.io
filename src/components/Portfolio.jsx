@@ -47,7 +47,7 @@ function Portfolio() {
               description={project.description}
               imgUrl={project.imgUrl}
               timeInterval={project.timeInterval}
-              docsUrl={project.docsUrl}
+              docs={project.docs}
               stack={project.stack}
               link={project.link}
             />
