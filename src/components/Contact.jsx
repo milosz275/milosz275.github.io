@@ -27,7 +27,7 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!/^[a-zA-Z\s]*$/.test(name) || name.length < 2) {
+    if (name.length < 2) {
       Store.addNotification({
         title: "Error",
         message: "Please enter a valid name",
