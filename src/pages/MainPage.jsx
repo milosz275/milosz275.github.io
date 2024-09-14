@@ -4,7 +4,6 @@ import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import CookieConsent from "react-cookie-consent";
 import { setCookie } from "../functions/setCookie";
 import { getCookie } from "../functions/getCookie";
 import { googleAnalytics } from "../functions/googleAnalytics";
@@ -16,21 +15,61 @@ function MainPage() {
 	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
-		Store.addNotification({
-			title: "Welcome!",
-			message: "Please feel free to explore my portfolio 🚀",
-			type: "info",
-			container: "bottom-right",
-			insert: "bottom",
-			animationIn: ["animate__animated", "animate__fadeIn"],
-			animationOut: ["animate__animated", "animate__fadeOut"],
-			dismiss: {
-				duration: 5000,
-				onScreen: true
-			}
-		});
-
 		googleAnalytics();
+	}, []);
+
+	useEffect(() => {
+		const createNotification = () => {
+			Store.addNotification({
+				title: "Welcome!",
+				message: "Please feel free to explore my portfolio 🚀",
+				type: "info",
+				container: "bottom-right",
+				insert: "bottom",
+				animationIn: ["animate__animated", "animate__fadeIn"],
+				animationOut: ["animate__animated", "animate__fadeOut"],
+				dismiss: {
+					duration: 5000,
+					onScreen: true
+				},
+				onRemoval: () => {
+					Store.addNotification({
+						title: "Let's connect!",
+						message: "You can reach out to me via the contact form below 📬",
+						type: "info",
+						container: "bottom-right",
+						insert: "bottom",
+						animationIn: ["animate__animated", "animate__fadeIn"],
+						animationOut: ["animate__animated", "animate__fadeOut"],
+						dismiss: {
+							duration: 5000,
+							onScreen: true
+						}
+					});
+				}
+			});
+		};
+		createNotification();
+	}, []);
+
+	useEffect(() => {
+		const cookieConsent = getCookie("cookie-consent");
+		if (!cookieConsent) {
+			Store.addNotification({
+				title: "Cookies",
+				message: "This website uses cookies to enhance the user experience.",
+				type: "info",
+				container: "bottom-right",
+				insert: "bottom",
+				animationIn: ["animate__animated", "animate__fadeIn"],
+				animationOut: ["animate__animated", "animate__fadeOut"],
+				dismiss: {
+					duration: 5000,
+					onScreen: true
+				}
+			});
+			setCookie("cookie-consent", "true");
+		}
 	}, []);
 
 	useEffect(() => {
@@ -80,11 +119,6 @@ function MainPage() {
 					</div>
 					<div id="footer">
 						<Footer />
-					</div>
-					<div id="cookie-consent">
-						<CookieConsent>
-							This website uses cookies to enhance the user experience.{" "}
-						</CookieConsent>
 					</div>
 				</div>
 			</div>
