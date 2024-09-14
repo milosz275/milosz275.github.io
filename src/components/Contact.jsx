@@ -85,9 +85,9 @@ function Contact() {
           method: "POST",
           body: formData
         });
-        
+
         const data = await response.json();
-        
+
         if (data.success) {
           Store.addNotification({
             title: "Success",
@@ -187,7 +187,7 @@ function Contact() {
           <button
             type="submit"
             id="submit"
-            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">  
+            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">
             Work With Me
           </button>
         </form>

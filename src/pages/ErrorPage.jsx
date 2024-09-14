@@ -10,7 +10,7 @@ const ErrorPage = () => {
             navigate(ROOT_URL);
         }
         redirectToMainPage()
-      }, [navigate]);
+    }, [navigate]);
 
     return <div className={"ErrorPage"}></div>
 };

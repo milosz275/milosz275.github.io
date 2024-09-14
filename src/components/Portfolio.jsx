@@ -16,7 +16,9 @@ function Portfolio() {
     <div>
       <div className="flex flex-col md:flex-row justify-center my-20">
         <div className="w-full md:w-7/12">
-          <Title>Projects</Title>
+          <Title>
+            Projects
+          </Title>
           Welcome to Portfolio, where each endeavor is crafted with meticulous attention and care. With each new project, I strive not only to innovate but also to document the journey, capturing the essence of every creation. Explore how each endeavor showcases my dedication to precision and creativity. Feel free to filter them by stack.
           <br />
         </div>

@@ -1,9 +1,14 @@
 /* styles/rainbow.css */
 @keyframes rainbowAnimation {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(-360deg); }
-  }
-  
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(-360deg);
+    }
+}
+
 .text-rainbow {
     background: linear-gradient(to left, rgb(255, 186, 255), rgb(187, 91, 255), rgb(127, 127, 255), rgb(108, 255, 108), rgb(255, 89, 89));
     -webkit-background-clip: text;
@@ -22,6 +27,7 @@
     from {
         filter: hue-rotate(0deg);
     }
+
     to {
         filter: hue-rotate(360deg);
     }

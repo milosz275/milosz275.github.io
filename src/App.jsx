@@ -22,20 +22,20 @@ class App extends React.Component {
 		};
 	}
 	render() {
-        return (React.createElement(
-		"div",
-		{ className: "App" },
-		React.createElement(BrowserRouter, null,
-		React.createElement(Routes, null,
-		React.createElement(Route, { path: urls.ROOT_URL, element: React.createElement(MainPage, {}) }),
-		React.createElement(Route, { path: urls.UAV_URL, element: React.createElement(UAVPage, {}) }),
-		React.createElement(Route, { path: urls.UAV_COLL_URL, element: React.createElement(UAVPage, {}) }),
-		React.createElement(Route, { path: urls.CHECKERS_URL, element: React.createElement(CheckersGamePage, {}) }),
-		React.createElement(Route, { path: urls.CHECKERS_GAME_URL, element: React.createElement(CheckersGamePage, {}) }),
-		React.createElement(Route, { path: "blog-app", element: null }),
-		React.createElement(Route, { path: "*", element: React.createElement(ErrorPage, {}), })
-		))));
+		return (React.createElement(
+			"div",
+			{ className: "App" },
+			React.createElement(BrowserRouter, null,
+				React.createElement(Routes, null,
+					React.createElement(Route, { path: urls.ROOT_URL, element: React.createElement(MainPage, {}) }),
+					React.createElement(Route, { path: urls.UAV_URL, element: React.createElement(UAVPage, {}) }),
+					React.createElement(Route, { path: urls.UAV_COLL_URL, element: React.createElement(UAVPage, {}) }),
+					React.createElement(Route, { path: urls.CHECKERS_URL, element: React.createElement(CheckersGamePage, {}) }),
+					React.createElement(Route, { path: urls.CHECKERS_GAME_URL, element: React.createElement(CheckersGamePage, {}) }),
+					React.createElement(Route, { path: "blog-app", element: null }),
+					React.createElement(Route, { path: "*", element: React.createElement(ErrorPage, {}), })
+				))));
 	}
-  }
+}
 
 export default App;

@@ -1,5 +1,7 @@
 {
+    "cSpell.language": "en,pl",
     "cSpell.words": [
+        "adsense",
         "Diffie",
         "Doxygen",
         "hiva",
@@ -15,6 +17,8 @@
         "Pico",
         "predeploy",
         "rainforest",
+        "safeweb",
+        "samesite",
         "SFML",
         "subpage",
         "Subpages",
@@ -22,5 +26,19 @@
         "TTFB",
         "wakatime",
         "Wyszyński"
-    ]
+    ],
+    "task.allowAutomaticTasks": "on",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    },
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.rulers": [
+        200
+    ],
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 200
 }

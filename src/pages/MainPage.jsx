@@ -14,7 +14,7 @@ import "react-notifications-component/dist/theme.css"
 
 function MainPage() {
 	const [theme, setTheme] = useState(null);
-	
+
 	useEffect(() => {
 		Store.addNotification({
 			title: "Welcome!",
@@ -29,9 +29,9 @@ function MainPage() {
 				onScreen: true
 			}
 		});
-		
+
 		googleAnalytics();
-	} ,[]);
+	}, []);
 
 	useEffect(() => {
 		const darkThemeCookie = getCookie("dark-theme");

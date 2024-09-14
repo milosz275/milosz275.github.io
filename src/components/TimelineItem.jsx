@@ -8,7 +8,7 @@ TimelineItem.propTypes = {
   details: PropTypes.string.isRequired,
 };
 
-function TimelineItem({year, title, duration, details}) {
+function TimelineItem({ year, title, duration, details }) {
   const lines = details.split("\n").filter((line, index, arr) => line || index < arr.length - 1);
 
   return (
