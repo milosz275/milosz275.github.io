@@ -37,10 +37,10 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
 
   return (
     <div
-      className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden md:hover:bg-slate-100 \
-      md:dark:hover:bg-github lg:hover:bg-slate-100 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
-      md:ease-in-out md:hover:scale-105 md:dark:hover:scale-105 lg:transition lg:duration-300 \
-      lg:ease-in-out lg:hover:scale-105 lg:dark:hover:scale-105">
+      className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg overflow-hidden md:hover:bg-slate-200 \
+      md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
+      md:ease-in-out lg:transition lg:duration-300 \
+      lg:ease-in-out hover:backdrop-blur-0 hover:blur-0">
       <div className="w-full h-full p-4 mt-3 cursor-pointer">
         <div className="flex flex-col w-full h-40" onClick={handleClick(link)} onMouseDown={handleClick(link)}>
           <h3 className="h-full text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold select-none">
@@ -55,7 +55,7 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
             onClick={handleClick(link)} onMouseDown={handleClick(link)}
             src={imgUrl}
             alt={title}
-            className="w-full h-48 mb-4 object-cover object-center rounded-md border-2 border-stone-900 dark:border-white"
+            className="w-full h-48 mb-4 object-cover object-center bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg"
           />
           <div className="flex flex-row items-center justify-between pb-3">
             <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
@@ -69,7 +69,7 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
           </div>
           <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
             {stack.map(item => (
-              <span className="inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-gray-300 rounded-md" key={item}>
+              <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg" key={item}>
                 {item}
               </span>))}
           </p>

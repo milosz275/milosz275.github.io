@@ -10,9 +10,9 @@ function Footer() {
 							href="https://www.linkedin.com/in/mi%C5%82osz-maculewicz/"
 							target="_blank"
 							rel="noreferrer"
-							className="bg-stone-400 hover:bg-stone-600 dark:bg-stone-600 dark:hover:bg-github p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+							className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg p-2 font-semibold dark:text-white inline-flex items-center space-x-2 rounded-full">
 							<svg
-								className="w-5 h-5 fill-current"
+								className="w-5 h-5 fill-current opacity-70 dark:opacity-100"
 								role="img"
 								viewBox="0 0 256 256"
 								xmlns="http://www.w3.org/2000/svg">
@@ -25,13 +25,13 @@ function Footer() {
 							href="https://github.com/mldxo"
 							target="_blank"
 							rel="noreferrer"
-							className="bg-stone-400 hover:bg-stone-600 dark:bg-stone-600 dark:hover:bg-github/[.6] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+							className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg p-2 font-semibold dark:text-white inline-flex items-center space-x-2 rounded-full">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								xmlnsXlink="http://www.w3.org/1999/xlink"
 								aria-hidden="true"
 								role="img"
-								className="w-5"
+								className="w-5 opacity-70 dark:opacity-100"
 								preserveAspectRatio="xMidYMid meet"
 								viewBox="0 0 24 24">
 								<g fill="none">
@@ -46,7 +46,7 @@ function Footer() {
 					</div>
 				</div>
 			</div>
-			<p className="text-sm mt-2  opacity-50">
+			<p className="text-sm mt-2  opacity-50" onClick={() => window.scrollTo(0, 0)}>
 				&copy; {new Date().getFullYear()} Miłosz Maculewicz. All rights reserved.
 			</p>
 		</div>

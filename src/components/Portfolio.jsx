@@ -15,7 +15,7 @@ function Portfolio() {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-center my-20">
-        <div className="w-full md:w-7/12">
+        <div className="w-full md:w-9/12 p-12 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg">
           <Title>
             Projects
           </Title>
@@ -25,7 +25,7 @@ function Portfolio() {
       </div>
       <div className="flex flex-wrap gap-2 mb-4">
         <button
-          className={`inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-gray-300 rounded-md ${filterStack === '' ? 'bg-gray-100 text-slate-900' : ''}`}
+          className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg ${filterStack === '' ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''}`}
           onClick={() => setFilterStack('')}
         >
           All
@@ -33,7 +33,7 @@ function Portfolio() {
         {uniqueStacks.map(stack => (
           <button
             key={stack}
-            className={`inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-gray-300 rounded-md ${filterStack === stack ? 'bg-gray-100 text-slate-900' : ''}`}
+            className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg ${filterStack === stack ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''}`}
             onClick={() => setFilterStack(stack)}
           >
             {stack}

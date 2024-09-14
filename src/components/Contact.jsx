@@ -169,27 +169,29 @@ function Contact() {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className={`placeholder-gray-500 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${name ? "bg-white text-black" : "bg-transparent"}`} />
+            className={`text-white outline-0 focus:outline-0 placeholder-gray-500 p-2 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg border-stone-600 dark:border-white ${name ? "bg-transparent text-black" : "bg-transparent"}`} />
           <input
             type="text"
             name="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`placeholder-gray-500 my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${email ? "bg-white text-black" : "bg-transparent"}`} />
+            className={`text-white outline-0 focus:outline-0 placeholder-gray-500 my-2 p-2 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg dark:border-white ${email ? "bg-transparent text-black" : "bg-transparent"}`} />
           <textarea
             name="message"
             placeholder="Message"
             rows="10"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={`placeholder-gray-500 p-2 mb-4 border-2 rounded-md focus:outline-none border-stone-600 dark:border-white transition-colors duration-1000 ${message ? "bg-white text-black" : "bg-transparent"}`} />
-          <button
-            type="submit"
-            id="submit"
-            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">
-            Work With Me
-          </button>
+            className={`text-white outline-0 focus:outline-0 placeholder-gray-500 p-2 mb-4 min-h-10 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg  ${message ? "bg-transparent text-black" : "bg-transparent"}`} />
+          <div className="w-48 bg-gradient-to-t from-blue-400 to-purple-400 transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg hover:from-blue-500 hover:to-purple-500">
+            <button
+              type="submit"
+              id="submit"
+              className="text-center inline-block px-8 py-3 w-48 text-base font-medium text-white transition-all duration-300 rounded-lg shadow-lg select-none bg-transparent">
+              Work With Me
+            </button>
+          </div>
         </form>
       </div>
     </div>
