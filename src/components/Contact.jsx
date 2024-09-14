@@ -11,16 +11,6 @@ function Contact() {
   localStorage.setItem("email", email);
   localStorage.setItem("message", message);
 
-  window.onload = () => {
-    Notification.requestPermission().then(permission => {
-      if (permission === "granted") {
-        new Notification("Welcome to my Portfolio!", {
-          body: "Feel free to reach out to me for any inquiries or just to say hi! 🌟\nKind regards, Miłosz Maculewicz"
-        });
-      }
-    });
-  }
-
   function clearWithTransition(setValue, value) {
     let i = value.length;
     const intervalId = setInterval(() => {
