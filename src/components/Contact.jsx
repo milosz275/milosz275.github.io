@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Title from "./Title";
+import { Store } from "react-notifications-component"
+import "react-notifications-component/dist/theme.css"
 
 function Contact() {
-  const [result, setResult] = useState("");
   const [name, setName] = useState(localStorage.getItem("name") || "");
   const [email, setEmail] = useState(localStorage.getItem("email") || "");
   const [message, setMessage] = useState(localStorage.getItem("message") || "");
@@ -25,19 +26,50 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-      setResult("Please enter a valid email")
-      setTimeout(() => {
-        setResult("");
-      }, 5000);
-    }
-    else if (name === "" || email === "" || message === "") {
-      setResult("All fields must be filled out");
-        setTimeout(() => {
-          setResult("");
-        }, 5000);
-    }
-    else {
+
+    if (!/^[a-zA-Z\s]*$/.test(name) || name.length < 2) {
+      Store.addNotification({
+        title: "Error",
+        message: "Please enter a valid name",
+        type: "danger",
+        container: "bottom-right",
+        insert: "bottom",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      });
+    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      Store.addNotification({
+        title: "Error",
+        message: "Please enter a valid email",
+        type: "danger",
+        container: "bottom-right",
+        insert: "bottom",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      });
+    } else if (name === "" || email === "" || message === "") {
+      Store.addNotification({
+        title: "Error",
+        message: "All fields must be filled out",
+        type: "danger",
+        container: "bottom-right",
+        insert: "bottom",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      });
+    } else {
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
       localStorage.setItem("message", message);
@@ -57,29 +89,54 @@ function Contact() {
         const data = await response.json();
         
         if (data.success) {
-          setResult("Form Submitted Successfully");
+          Store.addNotification({
+            title: "Success",
+            message: "Form submitted successfully",
+            type: "success",
+            container: "bottom-right",
+            insert: "bottom",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true
+            }
+          });
           event.target.reset();
           clearWithTransition(setName, name);
           clearWithTransition(setEmail, email);
           clearWithTransition(setMessage, message);
-          setTimeout(() => {
-            setResult("");
-          }, 5000);
         }
         else {
-          console.log("Error", data);
-          setResult("Failed to submit form");
-          setTimeout(() => {
-            setResult("");
-          }, 5000);
+          Store.addNotification({
+            title: "Error",
+            message: "Failed to submit form",
+            type: "danger",
+            container: "bottom-right",
+            insert: "bottom",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true
+            }
+          });
         }
       }
       catch (error) {
-        console.error("Error:", error);
-        setResult("Failed to submit form");
-        setTimeout(() => {
-          setResult("");
-        }, 5000);
+        Store.addNotification({
+          title: "Error",
+          message: "Failed to submit form",
+          type: "danger",
+          container: "bottom-right",
+          insert: "bottom",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true
+          }
+        });
       }
     }
   };
@@ -97,7 +154,9 @@ function Contact() {
               document.getElementById("submit").click();
             }
           }}>
-          <Title>Contact</Title>
+          <Title>
+            Contact
+          </Title>
           <p className="text-left text-gray-800 dark:text-gray-300 mb-2">
             Feel free to reach out to me for any inquiries or just to say hi! 🌟
           </p>
@@ -128,12 +187,9 @@ function Contact() {
           <button
             type="submit"
             id="submit"
-            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 drop-shadow-md hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">  
+            className="drop-shadow-dark dark:drop-shadow-light text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:stroke-white hover:from-purple-400 hover:to-blue-600 select-none">  
             Work With Me
           </button>
-          <span className={`h-4 text-left mt-4 text-sm text-gray-800 dark:text-gray-300 transition-opacity duration-500 ease-in-out ${result ? "opacity-100" : "opacity-0"}`}>
-            {result}
-          </span>
         </form>
       </div>
     </div>
