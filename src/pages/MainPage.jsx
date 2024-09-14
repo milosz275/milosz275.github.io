@@ -8,11 +8,27 @@ import CookieConsent from "react-cookie-consent";
 import { setCookie } from "../functions/setCookie";
 import { getCookie } from "../functions/getCookie";
 import { googleAnalytics } from "../functions/googleAnalytics";
+import { Store } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 function MainPage() {
 	const [theme, setTheme] = useState(null);
-
+	
 	useEffect(() => {
+		Store.addNotification({
+			title: "Welcome!",
+			message: "Please feel free to explore my portfolio 🚀",
+			type: "info",
+			container: "bottom-right",
+			insert: "bottom",
+			animationIn: ["animate__animated", "animate__fadeIn"],
+			animationOut: ["animate__animated", "animate__fadeOut"],
+			dismiss: {
+				duration: 5000,
+				onScreen: true
+			}
+		});
+		
 		googleAnalytics();
 	} ,[]);
 
@@ -78,7 +94,7 @@ function MainPage() {
 			<button
 				type="button"
 				onClick={handleThemeSwitch}
-				className="fixed p-2 z-10 right-5 top-4 bg-github hover:bg-github/[.825] dark:bg-blue-200 hover:dark:bg-blue-300 text-lg p-1 rounded-md">
+				className="fixed p-2 z-10 right-5 top-4 bg-github hover:bg-github/[.825] dark:bg-blue-200 hover:dark:bg-blue-300 text-lg rounded-md">
 				{theme === "dark" ? sun : moon}
 			</button>
 			<div className="bg-fixed bg-cover bg-full bg-sea-light dark:bg-sea-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
