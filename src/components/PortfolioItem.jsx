@@ -38,7 +38,7 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
   return (
     <div
       className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg overflow-hidden md:hover:bg-slate-200 \
-      md:dark:hover:bg-github lg:hover:bg-slate-200 lg:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
+      md:dark:hover:bg-github cursor-pointer md:transition md:duration-300 \
       md:ease-in-out lg:transition lg:duration-300 \
       lg:ease-in-out hover:backdrop-blur-0 hover:blur-0">
       <div className="w-full h-full p-4 mt-3 cursor-pointer">
