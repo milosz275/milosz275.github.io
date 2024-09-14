@@ -15,7 +15,7 @@ function Portfolio() {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-center my-20">
-        <div className="w-full md:w-9/12 p-12 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg">
+        <div className="w-full md:w-9/12 p-12">
           <Title>
             Projects
           </Title>
