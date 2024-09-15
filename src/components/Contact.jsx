@@ -184,11 +184,11 @@ function Contact() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={`text-white outline-0 focus:outline-0 placeholder-gray-500 p-2 mb-4 min-h-10 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg  ${message ? "bg-transparent text-black" : "bg-transparent"}`} />
-          <div className="w-48 rounded-lg shadow-lg">
+          <div>
             <button
               type="submit"
               id="submit"
-              className="relative text-center inline-block px-5 py-2 text-base font-medium text-white rounded-lg select-none transition-opacity duration-300"
+              className="relative text-center inline-block px-5 py-2 text-base font-medium text-white rounded-lg shadow-lg select-none transition-opacity duration-300"
             >
               <span className="relative z-10 pointer-events-none">Submit</span>
               <span className="absolute inset-0 bg-gradient-to-t from-blue-500 to-purple-500 opacity-70 hover:opacity-100 transition-opacity duration-300 rounded-lg"></span>
