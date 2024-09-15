@@ -100,8 +100,10 @@ function MainPage() {
 			<button
 				type="button"
 				onClick={handleThemeSwitch}
-				className="fixed p-2 z-10 right-5 top-4 bg-github hover:bg-github/[.825] dark:bg-blue-200 hover:dark:bg-blue-300 text-lg rounded-md hover:scale-105 transition-all duration-200">
-				{theme === "dark" ? sun : moon}
+				className="fixed p-2 z-10 right-5 top-4 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 text-lg rounded-md hover:scale-105">
+				<div className="invert">
+					{theme === "dark" ? sun : moon}
+				</div>
 			</button>
 			<div className="bg-fixed bg-cover bg-full bg-sea-light dark:bg-sea-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 				<div className="max-w-5xl w-11/12 mx-auto">
