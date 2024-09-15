@@ -154,7 +154,7 @@ function Contact() {
               document.getElementById("submit").click();
             }
           }}>
-          <Title>
+          <Title id="0">
             Contact
           </Title>
           <p className="text-left text-gray-800 dark:text-gray-300 mb-2">

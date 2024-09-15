@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 TimelineItem.propTypes = {
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  duration: PropTypes.array.isRequired,
+  duration: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
 };
 
