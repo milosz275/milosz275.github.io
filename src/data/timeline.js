@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
         year: "Today",
         title: "Master's Degree in Computer Science",
         duration: "2 years",
@@ -7,6 +8,7 @@ export default [
             "Currently pursuing a Master's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. Enrolled in advanced coursework in cybersecurity, artificial intelligence and machine learning. Focused on developing a deep understanding of algorithms and data structures, as well as exploring the latest trends in technology and programming.",
     },
     {
+        id: 2,
         year: "2024",
         title: "Bachelor's Degree in Computer Science",
         duration: "3 years",
@@ -14,6 +16,7 @@ export default [
             "I was pursuing a Bachelor's degree in Computer Science at Cardinal Stefan Wyszyński University, Warsaw. I have completed coursework in data structures, algorithms, and software engineering. I am dedicated new technology learner and on a daily basis trying to improve my coding skills and general knowledge in Computer Science.",
     },
     {
+        id: 3,
         year: "2023",
         title: "Summer Internship",
         duration: "3 months",
@@ -21,6 +24,7 @@ export default [
             "I took part in designing data retrieval and analysis processes using scripting. I also contributed to the creation of robust network architecture, ensuring optimal performance and security. My role required strong collaboration with the team and a deep understanding of software engineering principles.",
     },
     {
+        id: 4,
         year: "Today",
         title: "Digital Nomad",
         duration: "7 years",
