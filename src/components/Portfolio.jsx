@@ -5,6 +5,11 @@ import Title from "./Title";
 
 function Portfolio() {
   const [filterStack, setFilterStack] = useState('');
+  const [isFiltersVisible, setIsFiltersVisible] = useState(false);
+
+  const toggleFiltersVisibility = () => {
+    setIsFiltersVisible(!isFiltersVisible);
+  };
 
   const filteredPortfolio = portfolio.filter(project =>
     filterStack === '' || project.stack.includes(filterStack)
@@ -15,7 +20,7 @@ function Portfolio() {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-center my-20">
-        <div className="w-full md:w-9/12 p-12">
+        <div className="w-full md:w-9/12 p-12 transition-colors duration-300">
           <Title id="0">
             Projects
           </Title>
@@ -23,22 +28,34 @@ function Portfolio() {
           <br />
         </div>
       </div>
-      <div className="flex flex-wrap gap-2 mb-4">
-        <button
-          className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg ${filterStack === '' ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''}`}
-          onClick={() => setFilterStack('')}
+      <div>
+        <h1 onClick={toggleFiltersVisibility} className="cursor-pointer text-md mb-2 opacity-60 hover:underline">
+          {isFiltersVisible ? "Hide Filters" : "Show Filters"}
+        </h1>
+        <div
+          className={`transition-max-height duration-500 ease-in-out overflow-hidden ${isFiltersVisible ? 'max-h-96' : 'max-h-0'
+            }`}
         >
-          All
-        </button>
-        {uniqueStacks.map(stack => (
-          <button
-            key={stack}
-            className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 backdrop-blur-lg rounded-lg shadow-lg ${filterStack === stack ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''}`}
-            onClick={() => setFilterStack(stack)}
-          >
-            {stack}
-          </button>
-        ))}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <button
+              className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github backdrop-blur-lg rounded-lg shadow-lg ${filterStack === '' ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''
+                }`}
+              onClick={() => setFilterStack('')}
+            >
+              All
+            </button>
+            {uniqueStacks.map((stack) => (
+              <button
+                key={stack}
+                className={`select-none inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github backdrop-blur-lg rounded-lg shadow-lg ${filterStack === stack ? 'bg-gray-100 text-slate-900 dark:hover:bg-gray-300' : ''
+                  }`}
+                onClick={() => setFilterStack(stack)}
+              >
+                {stack}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
