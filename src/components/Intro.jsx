@@ -31,14 +31,14 @@ function Intro() {
   }, [hasScrolled]);
 
   return (
-    <div className={`flex flex-col items-center justify-center text-center pt-20 pb-12 transition-all duration-500 ${hasScrolled ? "min-h-0" : "min-h-screen"}`}>
-      <h1 className="text-4xl md:text-5xl dark:text-white mb-1 md:mb-3 font-bold select-none hover:scale-105 transition-all duration-200">
+    <div className={`flex flex-col items-center justify-center text-center pt-20 pb-12 transition-all duration-300 ${hasScrolled ? "min-h-0" : "min-h-screen"}`}>
+      <h1 className="text-4xl md:text-5xl dark:text-white mb-1 md:mb-3 font-bold select-none">
         Miłosz Maculewicz
       </h1>
-      <p className="text-base dark:text-white max-w-xl mb-6 font-normal hover:scale-105 transition-all duration-200">
+      <p className="text-base dark:text-white max-w-xl mb-6 font-normal">
         creative craftsman
       </p>
-      <p className="text-sm dark:text-white max-w-xl mb-6 font-normal hover:scale-105 transition-all duration-200">
+      <p className="text-sm dark:text-white max-w-xl mb-6 font-normal">
         I&apos;m a fourth-year Computer Science student with a strong background in software development and system administration.
         I am proficient in multiple programming languages and have a keen interest in mastering OOP and structural programming.
         Currently, I&apos;m working on a <a href="https://github.com/mldxo/blog-app" target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">Blog App</a> project.
