@@ -4,9 +4,9 @@ import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { setCookie } from "../functions/setCookie";
-import { getCookie } from "../functions/getCookie";
-import { googleAnalytics } from "../functions/googleAnalytics";
+import { SetCookie } from "../components/SetCookie";
+import { GetCookie } from "../components/GetCookie";
+import { GoogleAnalytics } from "../components/GoogleAnalytics";
 import { sun, moon } from "../icons";
 import { Store } from "react-notifications-component"
 import "react-notifications-component/dist/theme.css"
@@ -15,7 +15,7 @@ function MainPage() {
 	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
-		googleAnalytics();
+		GoogleAnalytics();
 	}, []);
 
 	useEffect(() => {
@@ -53,7 +53,7 @@ function MainPage() {
 	}, []);
 
 	useEffect(() => {
-		const cookieConsent = getCookie("cookie-consent");
+		const cookieConsent = GetCookie("cookie-consent");
 		if (!cookieConsent) {
 			Store.addNotification({
 				title: "Cookies",
@@ -68,12 +68,12 @@ function MainPage() {
 					onScreen: true
 				}
 			});
-			setCookie("cookie-consent", "true");
+			SetCookie("cookie-consent", "true");
 		}
 	}, []);
 
 	useEffect(() => {
-		const darkThemeCookie = getCookie("dark-theme");
+		const darkThemeCookie = GetCookie("dark-theme");
 		if (darkThemeCookie) {
 			setTheme(darkThemeCookie === "true" ? "dark" : "light");
 		}
@@ -92,7 +92,7 @@ function MainPage() {
 
 	const handleThemeSwitch = () => {
 		setTheme(theme === "dark" ? "light" : "dark");
-		setCookie("dark-theme", theme === "dark" ? "false" : "true");
+		SetCookie("dark-theme", theme === "dark" ? "false" : "true");
 	};
 
 	return (
