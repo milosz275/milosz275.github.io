@@ -1,4 +1,4 @@
-export const googleAnalytics = () => {
+export const GoogleAnalytics = () => {
     const script = document.createElement("script");
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-SGT193QE7H";
     script.async = true;
