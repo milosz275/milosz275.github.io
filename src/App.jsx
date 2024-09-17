@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage"
+import ReposPage from "./pages/ReposPage"
 import UAVPage from "./pages/UAVPage"
 import CheckersGamePage from "./pages/CheckersGamePage"
 import ErrorPage from "./pages/ErrorPage"
@@ -29,6 +30,7 @@ class App extends React.Component {
 			React.createElement(BrowserRouter, null,
 				React.createElement(Routes, null,
 					React.createElement(Route, { path: urls.ROOT_URL, element: React.createElement(MainPage, {}) }),
+					React.createElement(Route, { path: urls.REPOS_URL, element: React.createElement(ReposPage, {}) }),
 					React.createElement(Route, { path: urls.UAV_URL, element: React.createElement(UAVPage, {}) }),
 					React.createElement(Route, { path: urls.UAV_COLL_URL, element: React.createElement(UAVPage, {}) }),
 					React.createElement(Route, { path: urls.CHECKERS_URL, element: React.createElement(CheckersGamePage, {}) }),
