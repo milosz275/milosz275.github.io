@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PortfolioItem from "./PortfolioItem";
 import portfolio from "../data/portfolio";
 import Title from "./Title";
+import { REPOS_URL } from "../urls";
 
 function Portfolio() {
+  const navigate = useNavigate();
   const [filterStack, setFilterStack] = useState('');
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
@@ -24,8 +27,18 @@ function Portfolio() {
           <Title id="0">
             Projects
           </Title>
-          Welcome to Portfolio, where each endeavor is crafted with meticulous attention and care. With each new project, I strive not only to innovate but also to document the journey, capturing the essence of every creation. Explore how each endeavor showcases my dedication to precision and creativity. Feel free to filter them by stack.
-          <br />
+          <p className="text-md mb-4">
+            Welcome to Portfolio, where each endeavor is crafted with meticulous attention and care. With each new project, I strive not only to innovate but also to document the journey, capturing the essence of every creation. Explore how each endeavor showcases my dedication to precision and creativity. Feel free to filter them by stack.
+          </p>
+          <p className="text-md">
+            Explore my projects by GitHub repo using{" "}
+            <span
+              onClick={() => navigate(REPOS_URL)}
+              className="cursor-pointer text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400"
+            >
+              repos subpage
+            </span>.
+          </p>
         </div>
       </div>
       <div>
