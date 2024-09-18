@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Title from "../components/Title";
+import { ROOT_URL } from "../urls";
 import { SetCookie } from "../components/SetCookie";
 import { GetCookie } from "../components/GetCookie";
 import { GoogleAnalytics } from "../components/GoogleAnalytics";
 import { sun, moon } from "../icons";
-import { Store } from "react-notifications-component"
-import "react-notifications-component/dist/theme.css"
-import { ROOT_URL } from "../urls";
+import { Store } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 function ReposPage() {
     const navigate = useNavigate();
     const [theme, setTheme] = useState(null);
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [commitCounts, setCommitCounts] = useState({});
+    const [rateLimitExceeded, setRateLimitExceeded] = useState(false);
 
     useEffect(() => {
         GoogleAnalytics();
@@ -34,8 +37,8 @@ function ReposPage() {
                     duration: 5000,
                     onScreen: true
                 }
-            })
-        }
+            });
+        };
         createNotification();
     }, []);
 
@@ -43,8 +46,7 @@ function ReposPage() {
         const darkThemeCookie = GetCookie("dark-theme");
         if (darkThemeCookie) {
             setTheme(darkThemeCookie === "true" ? "dark" : "light");
-        }
-        else {
+        } else {
             setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         }
     }, []);
@@ -66,6 +68,11 @@ function ReposPage() {
         const fetchRepos = async () => {
             try {
                 const response = await fetch("https://api.github.com/users/mldxo/repos");
+                if (response.status === 403) {
+                    setRateLimitExceeded(true);
+                    setLoading(false);
+                    return;
+                }
                 const data = await response.json();
                 setRepos(data);
                 setLoading(false);
@@ -76,6 +83,45 @@ function ReposPage() {
         };
         fetchRepos();
     }, []);
+
+    const fetchCommitCount = async (repo, retryCount = 0) => {
+        const maxRetries = 3;
+        const retryDelay = 60000;
+
+        try {
+            const response = await axios.get(`https://api.github.com/repos/${repo.full_name}/commits?per_page=1&page=1`);
+            const linkHeader = response.headers.link;
+            if (linkHeader) {
+                const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
+                return lastPageMatch ? parseInt(lastPageMatch[1], 10) : 1;
+            } else {
+                return 1;
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 403 && retryCount < maxRetries) {
+                console.warn(`Rate limit exceeded for ${repo.full_name}. Retrying in ${retryDelay / 1000} seconds...`);
+                await new Promise(resolve => setTimeout(resolve, retryDelay));
+                return fetchCommitCount(repo, retryCount + 1);
+            } else {
+                console.error(`Error fetching commits for ${repo.full_name}:`, error);
+                return 'Error';
+            }
+        }
+    };
+
+    useEffect(() => {
+        const fetchCommitCounts = async () => {
+            const counts = {};
+            for (const repo of repos) {
+                counts[repo.id] = await fetchCommitCount(repo);
+            }
+            setCommitCounts(counts);
+        };
+
+        if (repos.length > 0) {
+            fetchCommitCounts();
+        }
+    }, [repos]);
 
     const placeholderCards = Array(6).fill(0).map((_, index) => (
         <div key={index} className="p-4 border rounded-md shadow-md bg-slate-200 dark:bg-slate-800 animate-pulse">
@@ -114,12 +160,16 @@ function ReposPage() {
                         <div id="repos" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {loading ? (
                                 placeholderCards
+                            ) : rateLimitExceeded ? (
+                                <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center text-red-500">
+                                    API rate limit exceeded. Please try again later.
+                                </div>
                             ) : (
                                 repos.map((repo) => (
                                     <div
                                         key={repo.id}
                                         className="p-4 border rounded-md shadow-md bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 flex flex-col justify-between"
-                                        style={{ minHeight: "250px" }}  // Optional: Adjust min-height to fit your layout
+                                        style={{ minHeight: "250px" }}
                                     >
                                         <div className="flex-grow">
                                             <h3 className="text-xl font-bold mb-2 text-github dark:text-slate-300">
@@ -130,7 +180,6 @@ function ReposPage() {
                                             <p className="mb-3 text-sm text-gray-700 dark:text-gray-400">
                                                 {repo.description ? repo.description : "No description available."}
                                             </p>
-                                            
                                         </div>
                                         <div className="mt-4">
                                             {repo.archived && (
@@ -145,6 +194,9 @@ function ReposPage() {
                                                 Stars: {repo.stargazers_count} | Forks: {repo.forks_count} | Watching: {repo.watchers_count} | Issues: {repo.open_issues_count}
                                             </p>
                                             <p className="text-xs text-gray-500 dark:text-gray-500">
+                                                Commits: {commitCounts[repo.id] !== undefined ? commitCounts[repo.id] : 'Loading...'}
+                                            </p>
+                                            <p className="text-xs text-gray-500 dark:text-gray-500">
                                                 Size: {(repo.size / 1024).toFixed(2)} MB
                                             </p>
                                             <p className="text-xs text-gray-500 dark:text-gray-500">
@@ -155,7 +207,6 @@ function ReposPage() {
                                 ))
                             )}
                         </div>
-
                     </div>
                     <div id="footer">
                         <Footer />
@@ -163,7 +214,7 @@ function ReposPage() {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default ReposPage;
