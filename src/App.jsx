@@ -39,6 +39,7 @@ class App extends React.Component {
 					React.createElement(Route, { path: urls.CHECKERS_GAME_URL, element: React.createElement(CheckersGamePage, {}) }),
 					React.createElement(Route, { path: urls.PRIVACY_URL, element: React.createElement(PrivacyPage, {}) }),
 					React.createElement(Route, { path: "blog-app", element: null }),
+					React.createElement(Route, { path: "social-networking-platform", element: null }),
 					React.createElement(Route, { path: "*", element: React.createElement(ErrorPage, {}), })
 				))));
 	}
