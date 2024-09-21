@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
 PortfolioItem.propTypes = {
@@ -19,6 +19,14 @@ const handleClick = (link) => () => {
 
 function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, link }) {
   const timeoutId = useRef(null);
+  const [src, setSrc] = useState(imgUrl);
+  const [isFallback, setIsFallback] = useState(false);
+  const fallbackImgUrl = "assets/undraw_programming_re_kg9v.svg";
+
+  const handleError = () => {
+    setSrc(fallbackImgUrl);
+    setIsFallback(true);
+  };
 
   useEffect(() => {
     const handleResize = () => { };
@@ -52,10 +60,12 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
         </div>
         <div>
           <img
-            onClick={handleClick(link)} onMouseDown={handleClick(link)}
-            src={imgUrl}
+            onClick={handleClick(link)}
+            onMouseDown={handleClick(link)}
+            src={src}
             alt={title}
-            className="w-full h-48 mb-4 object-cover object-center bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg"
+            onError={handleError}
+            className={`w-full h-48 mb-4 object-cover object-center bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg ${isFallback ? 'backdrop-brightness-50' : ''}`}
           />
           <div className="flex flex-row items-center justify-between pb-3">
             <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
