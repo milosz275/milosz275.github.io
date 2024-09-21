@@ -136,6 +136,18 @@ function ReposPage() {
         </div>
     ));
 
+    function formatSize(size) {
+        if (size < 1024) {
+            return `${size.toFixed(2)} B`;
+        } else if (size < 1024 * 1024) {
+            return `${(size / 1024).toFixed(2)} KB`;
+        } else if (size < 1024 * 1024 * 1024) {
+            return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+        } else {
+            return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+        }
+    }
+
     return (
         <>
             <button
@@ -197,7 +209,7 @@ function ReposPage() {
                                                 Commits: {commitCounts[repo.id] !== undefined ? commitCounts[repo.id] : 'Loading...'}
                                             </p>
                                             <p className="text-xs text-gray-500 dark:text-gray-500">
-                                                Size: {(repo.size / 1024).toFixed(2)} MB
+                                                Size: {formatSize(repo.size)}
                                             </p>
                                             <p className="text-xs text-gray-500 dark:text-gray-500">
                                                 Last updated: {new Date(repo.updated_at).toLocaleDateString()}
