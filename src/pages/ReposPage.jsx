@@ -138,13 +138,13 @@ function ReposPage() {
 
     function formatSize(size) {
         if (size < 1024) {
-            return `${size.toFixed(2)} B`;
+            return `${size.toFixed(2)} KB`;
         } else if (size < 1024 * 1024) {
-            return `${(size / 1024).toFixed(2)} KB`;
+            return `${(size / 1024).toFixed(2)} MB`;
         } else if (size < 1024 * 1024 * 1024) {
-            return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+            return `${(size / (1024 * 1024)).toFixed(2)} GB`;
         } else {
-            return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+            return `${(size / (1024 * 1024 * 1024)).toFixed(2)} TB`;
         }
     }
 
