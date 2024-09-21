@@ -4,21 +4,21 @@ export default [
         title: "UAV Collision Avoidance",
         description: "UAV collision avoidance simulation built with Python3 and PyQt6. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions. The simulation is part of my Bachelor's thesis.",
         timeInterval: ["December 2023", "June 2024"],
-        docs: ["Docs", "https://github.com/mldxo/uav-collision-avoidance/tree/main/docs/en"],
+        docs: ["Docs", "https://mldxo.github.io/uav-collision-avoidance"],
         stack: ["Python3", "Qt6", "Geometric Algorithms", "matplotlib", "PyPI"],
         imgUrl: "/assets/uav.png",
         link: "https://github.com/mldxo/uav-collision-avoidance"
     },
-    // {
-    //     id: 2,
-    //     title: "Secure Chat",
-    //     description: "Secure chat application built with C. The application allows users to communicate in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm. The application uses Cassandra as a database to store user data and the messages are end-to-end encrypted.",
-    //     timeInterval: ["June 2024", "now"],
-    //     docs: "https://mldxo.github.io/secure-chat",
-    //     stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
-    //     imgUrl: "/assets/secure-chat.png",
-    //     link: "https://github.com/mldxo/secure-chat"
-    // },
+    {
+        id: 2,
+        title: "Secure Chat",
+        description: "Distributed communication application built with C. The chat allows users to exchange messages in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm and end-to-end encryption. Cassandra is used as a database to store user data and encrypted messages.",
+        timeInterval: ["June 2024", "now"],
+        docs: ["Docs", "https://mldxo.github.io/secure-chat"],
+        stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
+        imgUrl: "/assets/secure-chat.png",
+        link: "https://github.com/mldxo/secure-chat"
+    },
     {
         id: 3,
         title: "RP Pico W Led Controller + Web Interface",
@@ -134,7 +134,7 @@ export default [
         title: "Social Networking Platform",
         description: "Social networking platform built with React and Django. The platform allows users to create posts, add likes, comments and follow other users. The platform will also include a chat feature.",
         timeInterval: ["November 2023", "January 2024"],
-        docs: ["Site", "https://ziomki.online"],
+        docs: ["Site", "https://mldxo.github.io/social-networking-platform"],
         stack: ["HTML", "CSS", "JavaScript", "React", "Python3", "Django"],
         imgUrl: "/assets/social.png",
         link: "https://github.com/himokkk/social-networking-platform"
