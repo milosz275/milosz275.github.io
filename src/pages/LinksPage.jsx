@@ -84,7 +84,7 @@ function LinksPage() {
                             Back to main page
                         </div>
                         <div id="links" className="w-full grid grid-cols-1">
-                            <table className="min-w-full bg-white dark:bg-gray-800">
+                            <table className="min-w-full bg-white/[.2] dark:bg-gray-800">
                                 <thead>
                                     <tr>
                                         <th className="py-2 px-4 border-b">Project Name</th>
