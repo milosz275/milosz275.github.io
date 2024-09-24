@@ -91,6 +91,16 @@ export default [
     },
     {
         id: 10,
+        title: "GitHub Follow Manager",
+        description: "Bash script that allows users to manage their GitHub followers. Includes features like following all followers, unfollowing all followers, following all users that follow a specific user and more using the GitHub API.",
+        timeInterval: ["August 2024", "September 2024"],
+        docs: ["Docs", "https://mldxo.github.io/github-follow-manager"],
+        stack: ["Bash", "JavaScript", "HTML", "CSS", "GitHub API"],
+        imgUrl: "/assets/github-follow-manager.png",
+        link: "https://github.com/mldxo/github-follow-manager"
+    },
+    {
+        id: 11,
         title: "Classification Methods Comparison",
         description: "R/Jupyter Notebook comparison of the following classification method: k-NN, SVM, and Random Forest algorithms. The comparison is based on the accuracy of the algorithms on following datasets: Iris, Penguins and Hawks",
         timeInterval: ["December 2023", "January 2024"],
@@ -100,7 +110,7 @@ export default [
         link: "https://github.com/mldxo/classification-methods-comparison"
     },
     {
-        id: 11,
+        id: 12,
         title: "Dining Philosophers Problem",
         description: "Python implementation of simulation of the dining philosophers problem. The simulation optimizes the parameters of the problem to showcase the most efficient solution.",
         timeInterval: ["April 2024", "May 2024"],
@@ -110,7 +120,7 @@ export default [
         link: "https://github.com/mldxo/dining-philosophers"
     },
     {
-        id: 12,
+        id: 13,
         title: "Python Package Template",
         description: "Python3 package template that can be used to create new PyPI packages. The template includes a pyproject.toml file, an expandable README.md, a MIT license and sample tests. The template is ready to be published on PyPI.",
         timeInterval: ["February 2024"],
@@ -120,7 +130,7 @@ export default [
         link: "https://github.com/mldxo/python-package-template"
     },
     {
-        id: 13,
+        id: 14,
         title: "C/C++ Template",
         description: "C/C++ template that can be used to create new projects. The template includes a Makefile, a README.md, a MIT license and sample tests. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
         timeInterval: ["June 2024"],
@@ -130,7 +140,7 @@ export default [
         link: "https://github.com/mldxo/c-cpp-template"
     },
     {
-        id: 14,
+        id: 15,
         title: "Social Networking Platform",
         description: "Social networking platform built with React and Django. The platform allows users to create posts, add likes, comments and follow other users. The platform will also include a chat feature.",
         timeInterval: ["November 2023", "January 2024"],
@@ -140,12 +150,12 @@ export default [
         link: "https://github.com/himokkk/social-networking-platform"
     },
     {
-        id: 15,
-        title: "mldxo.github.io",
-        description: "This Portfolio was built with React and Tailwind CSS. It is a single page application that showcases my work and experience. Subpages are used in order to host documentation for my projects.",
+        id: 16,
+        title: "Portfolio",
+        description: "This repository is using GitHub Pages to deploy a Portfolio, that includes a list of projects, a short bio, and a contact form. The website is built with React, Vite, and Tailwind CSS. Subpages are generated dynamically based on the projects data.",
         timeInterval: ["April 2024", "May 2024"],
         docs: [],
-        stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
+        stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS", "GitHub API"],
         imgUrl: "/assets/portfolio-dark.png",
         link: "https://github.com/mldxo/mldxo.github.io"
     },
