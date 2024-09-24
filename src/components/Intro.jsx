@@ -47,12 +47,10 @@ function Intro() {
         Miłosz Maculewicz
       </h1>
       <p className="text-base dark:text-white max-w-xl mb-6 font-normal">
-        creative craftsman
+        Hi, I'm Miłosz, a software engineer based in Poland.
       </p>
       <p className="text-sm dark:text-white max-w-xl mb-6 font-normal">
-        I&apos;m a fourth-year Computer Science student with a strong background in software development and system administration.
-        I am proficient in multiple programming languages and have a keen interest in mastering OOP and structural programming.
-        Currently, I&apos;m working on a <a href={featuredProjects[0].link} target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">{featuredProjects[0].name}</a> project.
+        I'm a fourth-year Computer Science student, constantly striving to develop my skills and forge my own path in the tech world. Currently, I'm working on a <a href={featuredProjects[0].link} target="_blank" rel="noreferrer noopener" className="text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400">{featuredProjects[0].name}</a> project, always seeking new challenges and opportunities to grow.
       </p>
       <div className={`opacity-0 ${hasScrolled ? "opacity-100 translate-y-0" : "translate-y-10"} transition-opacity duration-700 ease-out`}>
         {/* <div className="flex flex-row space-x-2">
