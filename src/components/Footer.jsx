@@ -26,7 +26,7 @@ function Footer() {
 							</svg>
 						</a>
 						<a
-							href="https://github.com/mldxo"
+							href="https://github.com/milosz275"
 							target="_blank"
 							rel="noreferrer"
 							className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200/[.6] hover:dark:bg-github transition-all duration-300 backdrop-blur-lg p-2 font-semibold dark:text-white inline-flex items-center space-x-2 rounded-full">

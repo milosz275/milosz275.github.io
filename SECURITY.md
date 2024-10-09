@@ -10,4 +10,4 @@ There is no version tracking now.
 
 ## Reporting a Vulnerability
 
-Please inform me about any vulnerabilities found using contact form here: [mldxo.github.io/#contact](https://mldxo.github.io/#contact)
+Please inform me about any vulnerabilities found using contact form here: [milosz275.github.io/#contact](https://milosz275.github.io/#contact)

@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://mldxo.github.io/",
+  "homepage": "https://milosz275.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

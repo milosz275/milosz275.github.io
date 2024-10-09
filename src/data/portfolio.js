@@ -4,60 +4,60 @@ export default [
         title: "UAV Collision Avoidance",
         description: "UAV collision avoidance simulation built with Python3 and PyQt6. The simulation allows users to create a custom environment and test different test cases while using geometric approach to avoid collisions. The simulation is part of my Bachelor's thesis.",
         timeInterval: ["December 2023", "June 2024"],
-        docs: ["Docs", "https://mldxo.github.io/uav-collision-avoidance"],
+        docs: ["Docs", "https://milosz275.github.io/uav-collision-avoidance"],
         stack: ["Python3", "Qt6", "Geometric Algorithms", "matplotlib", "PyPI"],
         imgUrl: "/assets/uav.png",
-        link: "https://github.com/mldxo/uav-collision-avoidance"
+        link: "https://github.com/milosz275/uav-collision-avoidance"
     },
     {
         id: 2,
         title: "Secure Chat",
         description: "Distributed communication application built with C. The chat allows users to exchange messages in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm and end-to-end encryption. Cassandra is used as a database to store user data and encrypted messages.",
         timeInterval: ["June 2024", "now"],
-        docs: ["Docs", "https://mldxo.github.io/secure-chat"],
+        docs: ["Docs", "https://milosz275.github.io/secure-chat"],
         stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
         imgUrl: "/assets/secure-chat.png",
-        link: "https://github.com/mldxo/secure-chat"
+        link: "https://github.com/milosz275/secure-chat"
     },
     {
         id: 3,
         title: "RP Pico W Led Controller + Web Interface",
         description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
         timeInterval: ["June 2024", "July 2024"],
-        docs: ["Docs", "https://mldxo.github.io/pico-led-controller"],
+        docs: ["Docs", "https://milosz275.github.io/pico-led-controller"],
         stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "HTML", "CSS", "JavaScript", "Doxygen"],
         imgUrl: "/assets/pico.png",
-        link: "https://github.com/mldxo/pico-led-controller"
+        link: "https://github.com/milosz275/pico-led-controller"
     },
     {
         id: 4,
         title: "Blog App",
         description: "Full-stack blog application built with Python3, Django, HTML, CSS, JavaScript, React, Vite and Tailwind CSS. The application allows users to create, edit and delete posts. The application is part of my portfolio.",
         timeInterval: ["August 2024", "now"],
-        docs: ["Site", "https://mldxo.github.io/blog-app"],
+        docs: ["Site", "https://milosz275.github.io/blog-app"],
         stack: ["Python3", "Django", "HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS"],
         imgUrl: "/assets/blog.png",
-        link: "https://github.com/mldxo/blog-app"
+        link: "https://github.com/milosz275/blog-app"
     },
     {
         id: 5,
         title: "Leetcode Solutions",
         description: "Collection of solutions to Leetcode problems. C, C++ and Python are used. Repo present my approach to solving the problems and the urge to improve my coding skills.",
         timeInterval: ["July 2024", "now"],
-        docs: ["Docs", "https://mldxo.github.io/leetcode"],
+        docs: ["Docs", "https://milosz275.github.io/leetcode"],
         stack: ["C", "C++", "Make", "Python3", "Doxygen"],
         imgUrl: "/assets/leetcode.png",
-        link: "https://github.com/mldxo/leetcode"
+        link: "https://github.com/milosz275/leetcode"
     },
     {
         id: 6,
         title: "Checkers Game",
         description: "Checkers game built with C++ and SFML. The game allows players to play against each other or against a bot using the minimax algorithm with alpha-beta pruning to make decisions.",
         timeInterval: ["March 2023", "July 2023"],
-        docs: ["Docs", "https://mldxo.github.io/checkers-gui"],
+        docs: ["Docs", "https://milosz275.github.io/checkers-gui"],
         stack: ["C++", "Make", "SFML", "Minimax", "Alpha-Beta Pruning", "Doxygen", "Ai"],
         imgUrl: "/assets/checkers.png",
-        link: "https://github.com/mldxo/checkers-gui"
+        link: "https://github.com/milosz275/checkers-gui"
     },
     {
         id: 7,
@@ -67,7 +67,7 @@ export default [
         docs: [],
         stack: ["C++", "Qt6", "Winsock"],
         imgUrl: "/assets/messenger.png",
-        link: "https://github.com/mldxo/qt-messenger"
+        link: "https://github.com/milosz275/qt-messenger"
     },
     {
         id: 8,
@@ -77,7 +77,7 @@ export default [
         docs: [],
         stack: ["C++", "Make", "Ai"],
         imgUrl: "/assets/battleship.png",
-        link: "https://github.com/mldxo/battleship-console-game"
+        link: "https://github.com/milosz275/battleship-console-game"
     },
     {
         id: 9,
@@ -87,17 +87,17 @@ export default [
         docs: [],
         stack: ["C++", "Make", "libgmp"],
         imgUrl: "/assets/rsa.png",
-        link: "https://github.com/mldxo/rsa-keygen"
+        link: "https://github.com/milosz275/rsa-keygen"
     },
     {
         id: 10,
         title: "GitHub Follow Manager",
         description: "Bash script that allows users to manage their GitHub followers. Includes features like following all followers, unfollowing all followers, following all users that follow a specific user and more using the GitHub API.",
         timeInterval: ["August 2024", "September 2024"],
-        docs: ["Docs", "https://mldxo.github.io/github-follow-manager"],
+        docs: ["Docs", "https://milosz275.github.io/github-follow-manager"],
         stack: ["Bash", "JavaScript", "HTML", "CSS", "GitHub API"],
         imgUrl: "/assets/github-follow-manager.png",
-        link: "https://github.com/mldxo/github-follow-manager"
+        link: "https://github.com/milosz275/github-follow-manager"
     },
     {
         id: 11,
@@ -107,7 +107,7 @@ export default [
         docs: [],
         stack: ["R", "Jupyter Notebook"],
         imgUrl: "/assets/classification.png",
-        link: "https://github.com/mldxo/classification-methods-comparison"
+        link: "https://github.com/milosz275/classification-methods-comparison"
     },
     {
         id: 12,
@@ -117,7 +117,7 @@ export default [
         docs: [],
         stack: ["Python3", "matplotlib", "PyPI"],
         imgUrl: "/assets/philosophers.png",
-        link: "https://github.com/mldxo/dining-philosophers"
+        link: "https://github.com/milosz275/dining-philosophers"
     },
     {
         id: 13,
@@ -127,24 +127,24 @@ export default [
         docs: [],
         stack: ["Python3", "PyPI"],
         imgUrl: "/assets/package.png",
-        link: "https://github.com/mldxo/python-package-template"
+        link: "https://github.com/milosz275/python-package-template"
     },
     {
         id: 14,
         title: "C/C++ Template",
         description: "C/C++ template that can be used to create new projects. The template includes a Makefile, a README.md, a MIT license and sample tests. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
         timeInterval: ["June 2024"],
-        docs: ["Docs", "https://mldxo.github.io/c-cpp-template"],
+        docs: ["Docs", "https://milosz275.github.io/c-cpp-template"],
         stack: ["C", "C++", "Make", "CMake", "Doxygen"],
         imgUrl: "/assets/c-cpp.png",
-        link: "https://github.com/mldxo/c-cpp-template"
+        link: "https://github.com/milosz275/c-cpp-template"
     },
     {
         id: 15,
         title: "Social Networking Platform",
         description: "Social networking platform built with React and Django. The platform allows users to create posts, add likes, comments and follow other users. The platform will also include a chat feature.",
         timeInterval: ["November 2023", "January 2024"],
-        docs: ["Site", "https://mldxo.github.io/social-networking-platform"],
+        docs: ["Site", "https://milosz275.github.io/social-networking-platform"],
         stack: ["HTML", "CSS", "JavaScript", "React", "Python3", "Django"],
         imgUrl: "/assets/social.png",
         link: "https://github.com/himokkk/social-networking-platform"
@@ -157,6 +157,6 @@ export default [
         docs: [],
         stack: ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS", "GitHub API"],
         imgUrl: "/assets/portfolio-dark.png",
-        link: "https://github.com/mldxo/mldxo.github.io"
+        link: "https://github.com/milosz275/milosz275.github.io"
     },
 ]

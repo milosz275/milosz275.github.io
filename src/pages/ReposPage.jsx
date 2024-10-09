@@ -67,7 +67,7 @@ function ReposPage() {
     useEffect(() => {
         const fetchRepos = async () => {
             try {
-                const response = await fetch("https://api.github.com/users/mldxo/repos");
+                const response = await fetch("https://api.github.com/users/milosz275/repos");
                 if (response.status === 403) {
                     setRateLimitExceeded(true);
                     setLoading(false);

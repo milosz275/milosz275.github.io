@@ -33,11 +33,11 @@ function Intro() {
   const featuredProjects = [
     {
       name: "Secure Chat",
-      link: "https://github.com/mldxo/secure-chat"
+      link: "https://github.com/milosz275/secure-chat"
     },
     {
       name: "Blog App",
-      link: "https://github.com/mldxo/blog-app"
+      link: "https://github.com/milosz275/blog-app"
     },
   ];
 
