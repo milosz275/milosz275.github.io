@@ -12,17 +12,17 @@ export default [
     {
         id: 2,
         title: "Secure Chat",
-        description: "Distributed communication application built with C. The chat allows users to exchange messages in real-time using a secure connection based on the Diffie-Hellman key exchange algorithm and end-to-end encryption. Cassandra is used as a database to store user data and encrypted messages.",
-        timeInterval: ["June 2024", "now"],
+        description: "Text communication application built with C. The chat allows users to exchange messages in real-time using a secure connection based on HTTPS and end-to-end encryption. SQLite3 is used as a database to store user data and encrypted messages.",
+        timeInterval: ["June 2024", "October 2024"],
         docs: ["Docs", "https://milosz275.github.io/secure-chat"],
-        stack: ["C", "Make", "CMake", "OpenSSL", "Diffie-Hellman", "Cassandra", "Nuklear", "Doxygen"],
+        stack: ["C", "Make", "CMake", "OpenSSL", "SQLite3", "Raylib", "Doxygen"],
         imgUrl: "/assets/secure-chat.png",
         link: "https://github.com/milosz275/secure-chat"
     },
     {
         id: 3,
-        title: "RP Pico W Led Controller + Web Interface",
-        description: "C program built with CMake to control WS2812B LEDs. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
+        title: "Pico LED Controller",
+        description: "C program built with CMake to control WS2812B LEDs using Raspberry Pico W. The project includes a web interface with predefined light modes, it is based on HTML/JavaScript using CGI and SSI to communicate with Pico.",
         timeInterval: ["June 2024", "July 2024"],
         docs: ["Docs", "https://milosz275.github.io/pico-led-controller"],
         stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "HTML", "CSS", "JavaScript", "Doxygen"],
@@ -141,6 +141,16 @@ export default [
     },
     {
         id: 15,
+        title: "Pico W Template",
+        description: "C/C++ template that can be used to create new Pico projects. The template utilizes CMake and contains sample code for WiFi connection and multi-core operations. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
+        timeInterval: ["October 2024"],
+        docs: ["Docs", "https://milosz275.github.io/c-cpp-template"],
+        stack: ["C", "C++", "pico-sdk", "CMake", "Doxygen"],
+        imgUrl: "/assets/pico-w-template.png",
+        link: "https://github.com/milosz275/c-cpp-template"
+    },
+    {
+        id: 16,
         title: "Social Networking Platform",
         description: "Social networking platform built with React and Django. The platform allows users to create posts, add likes, comments and follow other users. The platform will also include a chat feature.",
         timeInterval: ["November 2023", "January 2024"],
@@ -150,7 +160,7 @@ export default [
         link: "https://github.com/himokkk/social-networking-platform"
     },
     {
-        id: 16,
+        id: 17,
         title: "Portfolio",
         description: "This repository is using GitHub Pages to deploy a Portfolio, that includes a list of projects, a short bio, and a contact form. The website is built with React, Vite, and Tailwind CSS. Subpages are generated dynamically based on the projects data.",
         timeInterval: ["April 2024", "May 2024"],

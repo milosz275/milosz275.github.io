@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Title from "../components/Title";
 import portfolio from "../data/portfolio";
@@ -14,6 +15,7 @@ import "react-notifications-component/dist/theme.css";
 function LinksPage() {
     const navigate = useNavigate();
     const [theme, setTheme] = useState(null);
+    const [projectsWithLinks, setProjectsWithLinks] = useState([]);
 
     useEffect(() => {
         GoogleAnalytics();
@@ -60,7 +62,35 @@ function LinksPage() {
         SetCookie("dark-theme", theme === "dark" ? "false" : "true");
     };
 
-    const projectsWithLinks = portfolio.filter(project => project.docs[0]);
+    useEffect(() => {
+        const fetchRepos = async () => {
+            try {
+                const username = 'milosz275';
+                const reposResponse = await axios.get(`https://api.github.com/users/${username}/repos`);
+                const repos = reposResponse.data;
+
+                const projectsWithDeployments = await Promise.all(
+                    repos.map(async (repo) => {
+                        const deploymentsResponse = await axios.get(`https://api.github.com/repos/${username}/${repo.name}/deployments`);
+                        if (deploymentsResponse.data.length > 0) {
+                            return {
+                                id: repo.id,
+                                name: repo.name,
+                                url: repo.html_url
+                            };
+                        }
+                        return null;
+                    })
+                );
+
+                setProjectsWithLinks(projectsWithDeployments.filter(repo => repo !== null));
+            } catch (error) {
+                console.error('Error fetching repositories or deployments:', error);
+            }
+        };
+
+        fetchRepos();
+    }, []);
 
     return (
         <>
@@ -98,14 +128,14 @@ function LinksPage() {
                                                 className="p-4 border rounded-md shadow-md bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300"
                                                 style={{ minHeight: "250px" }}
                                             >
-                                                {project.title}
+                                                {project.name}
                                             </td>
                                             <td
                                                 className="p-4 border rounded-md shadow-md bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300"
                                                 style={{ minHeight: "250px" }}
                                             >
-                                                <a href={project.docs[1]} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                                                    {project.docs[1]}
+                                                <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                                                    {project.url}
                                                 </a>
                                             </td>
                                         </tr>
