@@ -1,6 +1,5 @@
-export const SetCookie = (name, value, options = {}) => {
+export const setCookie = (name, value, options = {}) => {
     if (!name || /^(?:\s|%20)+$/.test(name)) {
-        console.error("Invalid cookie name");
         return;
     }
 

@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import TemplatePage from "../pages/TemplatePage";
 import Intro from "../components/Intro";
 import Portfolio from "../components/Portfolio";
 import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { SetCookie } from "../components/SetCookie";
-import { GetCookie } from "../components/GetCookie";
+import { setCookie } from "../functions/setCookie";
+import { getCookie } from "../functions/getCookie";
 import { GoogleAnalytics } from "../components/GoogleAnalytics";
-import { sun, moon } from "../icons";
 import { Store } from "react-notifications-component"
 import "react-notifications-component/dist/theme.css"
 
 function MainPage() {
-	const [theme, setTheme] = useState(null);
-
 	useEffect(() => {
 		GoogleAnalytics();
 	}, []);
@@ -53,7 +51,7 @@ function MainPage() {
 	}, []);
 
 	useEffect(() => {
-		const cookieConsent = GetCookie("cookie-consent");
+		const cookieConsent = getCookie("cookie-consent");
 		if (!cookieConsent) {
 			Store.addNotification({
 				title: "Cookies",
@@ -68,63 +66,30 @@ function MainPage() {
 					onScreen: true
 				}
 			});
-			SetCookie("cookie-consent", "true");
+			setCookie("cookie-consent", "true");
 		}
 	}, []);
-
-	useEffect(() => {
-		const darkThemeCookie = GetCookie("dark-theme");
-		if (darkThemeCookie) {
-			setTheme(darkThemeCookie === "true" ? "dark" : "light");
-		}
-		else {
-			setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-		}
-	}, []);
-
-	useEffect(() => {
-		if (theme === "dark") {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	}, [theme]);
-
-	const handleThemeSwitch = () => {
-		setTheme(theme === "dark" ? "light" : "dark");
-		SetCookie("dark-theme", theme === "dark" ? "false" : "true");
-	};
 
 	return (
-		<>
-			<button
-				type="button"
-				onClick={handleThemeSwitch}
-				className="fixed p-2 z-10 right-5 top-4 bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] hover:bg-slate-200 dark:hover:bg-github transition-all duration-300 text-lg rounded-md hover:scale-105">
-				<div className="invert">
-					{theme === "dark" ? sun : moon}
+		<TemplatePage>
+			<div className="max-w-5xl w-11/12 mx-auto">
+				<div id="intro">
+					<Intro />
 				</div>
-			</button>
-			<div className="bg-fixed bg-cover bg-full bg-sea-light dark:bg-sea-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-				<div className="max-w-5xl w-11/12 mx-auto">
-					<div id="intro">
-						<Intro />
-					</div>
-					<div id="portfolio">
-						<Portfolio />
-					</div>
-					<div id="timeline">
-						<Timeline />
-					</div>
-					<div id="contact">
-						<Contact />
-					</div>
-					<div id="footer">
-						<Footer />
-					</div>
+				<div id="portfolio">
+					<Portfolio />
+				</div>
+				<div id="timeline">
+					<Timeline />
+				</div>
+				<div id="contact">
+					<Contact />
+				</div>
+				<div id="footer">
+					<Footer />
 				</div>
 			</div>
-		</>
+		</TemplatePage>
 	)
 }
 
