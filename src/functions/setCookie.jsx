@@ -21,9 +21,7 @@ export const setCookie = (name, value, options = {}) => {
         cookieString += "; secure";
     }
 
-    if (options.samesite) {
-        cookieString += `; samesite=${options.samesite}`;
-    }
+    cookieString += `; SameSite=Strict`;
 
     document.cookie = cookieString;
 };

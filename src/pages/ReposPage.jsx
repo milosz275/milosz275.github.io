@@ -21,6 +21,14 @@ function ReposPage() {
     }, []);
 
     useEffect(() => {
+        const lastLogin = localStorage.getItem("lastLogin");
+        if (lastLogin) {
+            if (new Date().getTime() - new Date(lastLogin).getTime() < 86400000) { // 24 hours
+                return;
+            }
+        } else {
+            localStorage.setItem("lastLogin", new Date().toISOString());
+        }
         const createNotification = () => {
             Store.addNotification({
                 title: "GitHub Repositories",
