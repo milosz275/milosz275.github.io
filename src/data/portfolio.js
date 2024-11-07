@@ -26,7 +26,7 @@ export default [
         timeInterval: ["June 2024", "July 2024"],
         docs: ["Docs", "https://milosz275.github.io/pico-led-controller"],
         stack: ["C", "Make", "CMake", "CGI", "SSI", "pico-sdk", "HTML", "CSS", "JavaScript", "Doxygen"],
-        imgUrl: "/assets/pico.png",
+        imgUrl: "/assets/pico-led-controller.png",
         link: "https://github.com/milosz275/pico-led-controller"
     },
     {
