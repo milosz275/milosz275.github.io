@@ -133,7 +133,7 @@ function ReposPage() {
 
     return (
         <TemplatePage>
-            <div className="max-w-5xl w-11/12 mx-auto">
+            <div className={`max-w-5xl w-11/12 mx-auto ${loading ? 'cursor-loading' : 'cursor-default'}`}>
                 <div id="container" className="pt-20 pb-20">
                     <Title id="0">
                         GitHub Repositories
