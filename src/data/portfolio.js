@@ -142,12 +142,12 @@ export default [
     {
         id: 15,
         title: "Pico W Template",
-        description: "C/C++ template that can be used to create new Pico projects. The template utilizes CMake and contains sample code for WiFi connection and multi-core operations. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
+        description: "C/C++ template that can be used to create new RPi Pico W projects. The template utilizes CMake and contains sample code for WiFi connection and multi-core operations. The template is ready to be used in new projects including Doxygen deployment to gh-pages.",
         timeInterval: ["October 2024"],
-        docs: ["Docs", "https://milosz275.github.io/c-cpp-template"],
+        docs: ["Docs", "https://milosz275.github.io/pico-w-template"],
         stack: ["C", "C++", "pico-sdk", "CMake", "Doxygen"],
         imgUrl: "/assets/pico-w-template.png",
-        link: "https://github.com/milosz275/c-cpp-template"
+        link: "https://github.com/milosz275/pico-w-template"
     },
     {
         id: 16,
