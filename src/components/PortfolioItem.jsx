@@ -77,7 +77,7 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
           </div>
           <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
             {stack.map(item => (
-              <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] rounded-lg shadow-lg" key={item}>
+              <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-t transition-all hover:cursor-default duration-200 from-slate-100/[.2] to-slate-200[.1] hover:from-purple-200/[.9] hover:to-purple-700[.9] rounded-lg shadow-lg" key={item}>
                 {item}
               </span>))}
           </p>
