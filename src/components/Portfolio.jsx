@@ -34,7 +34,7 @@ function Portfolio() {
             Explore my projects by GitHub repo using{" "}
             <span
               onClick={() => navigate(REPOS_URL)}
-              className="cursor-pointer text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400"
+              className="cursor-pointer text-cyan-600 hover-underline-animation underline-offset-2 decoration-1 decoration-purple-400"
             >
               repos subpage
             </span>.
@@ -43,7 +43,7 @@ function Portfolio() {
             Take a look at {" "}
             <span
               onClick={() => navigate(LINKS_URL)}
-              className="cursor-pointer text-cyan-600 hover:underline underline-offset-2 decoration-1 decoration-purple-400"
+              className="cursor-pointer text-cyan-600 hover-underline-animation underline-offset-2 decoration-1 decoration-purple-400"
             >
               links subpage
             </span> to watch deployed projects only.
@@ -51,7 +51,7 @@ function Portfolio() {
         </div>
       </div>
       <div>
-        <h1 onClick={toggleFiltersVisibility} className="cursor-pointer text-md mb-2 opacity-60 hover:underline">
+        <h1 onClick={toggleFiltersVisibility} className="cursor-pointer text-md mb-2 opacity-60 hover-underline-animation">
           {isFiltersVisible ? "Hide Filters" : "Show Filters"}
         </h1>
         <div
