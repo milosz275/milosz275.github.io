@@ -11,11 +11,12 @@ PortfolioItem.propTypes = {
   link: PropTypes.string.isRequired,
 };
 
-const handleClick = (link) => () => {
-  if (document.hasFocus()) {
+const handleClick = (link) => (event) => {
+  const cursorStyle = window.getComputedStyle(event.target).cursor;
+  if (cursorStyle === "pointer" && document.hasFocus()) {
     window.open(link, "_blank");
   }
-}
+};
 
 function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, link }) {
   const timeoutId = useRef(null);
@@ -70,14 +71,14 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
               {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
             </p>
             {docs && docs.length >= 2 && (
-              <p onClick={handleClick(docs[1])} onMouseDown={handleClick(docs[1])} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 select-none p-1 rounded-md">
+              <p onClick={handleClick(docs[1])} onMouseDown={handleClick(docs[1])} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 duration-100 select-none p-1 rounded-md">
                 {docs[0]}
               </p>
             )}
           </div>
           <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
             {stack.map(item => (
-              <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-t transition-all hover:cursor-default duration-200 from-slate-100/[.2] to-slate-200[.1] hover:from-purple-200/[.9] hover:to-purple-700[.9] rounded-lg shadow-lg" key={item}>
+              <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-t transition-all duration-200 from-slate-100/[.2] to-slate-200[.1] rounded-lg shadow-lg" key={item}>
                 {item}
               </span>))}
           </p>
