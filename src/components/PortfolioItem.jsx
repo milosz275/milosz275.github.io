@@ -46,8 +46,8 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
 
   return (
     <div
-      className="bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] backdrop-blur-lg rounded-lg shadow-lg overflow-hidden sm:hover:bg-slate-200 \
-      sm:dark:hover:bg-github cursor-pointer sm:transition sm:duration-300 sm:ease-in-out sm:hover:backdrop-blur-0 sm:hover:blur-0">
+      className="bg-transparent backdrop-blur-lg rounded-lg shadow-lg overflow-hidden \
+      cursor-pointer sm:transition sm:duration-300 sm:ease-in-out">
       <div className="w-full h-full p-4 mt-3 cursor-pointer">
         <div className="flex flex-col w-full h-40" onClick={handleClick(link)} onMouseDown={handleClick(link)}>
           <h3 className="h-full text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold select-none">
@@ -64,7 +64,7 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
             src={src}
             alt={title}
             onError={handleError}
-            className={`w-full h-48 mb-4 object-cover object-center bg-gradient-to-t from-slate-100/[.2] to-slate-200[.1] rounded-lg shadow-lg ${isFallback ? 'backdrop-brightness-50' : ''}`}
+            className={`w-full h-48 mb-4 object-cover object-center bg-transparent rounded-lg shadow-lg ${isFallback ? 'backdrop-brightness-50' : ''}`}
           />
           <div className="flex flex-row items-center justify-between pb-3">
             <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
