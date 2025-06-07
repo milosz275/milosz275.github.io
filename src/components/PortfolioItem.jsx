@@ -7,6 +7,7 @@ PortfolioItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   timeInterval: PropTypes.array.isRequired,
   docs: PropTypes.array.isRequired,
+  demo: PropTypes.array.isRequired,
   stack: PropTypes.array.isRequired,
   link: PropTypes.string.isRequired,
 };
@@ -18,7 +19,7 @@ const handleClick = (link) => (event) => {
   }
 };
 
-function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, link }) {
+function PortfolioItem({ title, description, timeInterval, docs, demo, imgUrl, stack, link }) {
   const timeoutId = useRef(null);
   const [src, setSrc] = useState(imgUrl);
   const [isFallback, setIsFallback] = useState(false);
@@ -67,14 +68,33 @@ function PortfolioItem({ title, description, timeInterval, docs, imgUrl, stack, 
             className={`w-full h-48 mb-4 object-cover object-center bg-transparent rounded-lg shadow-lg ${isFallback ? 'backdrop-brightness-50' : ''}`}
           />
           <div className="flex flex-row items-center justify-between pb-3">
-            <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75">
+            <p
+              onClick={handleClick(link)}
+              onMouseDown={handleClick(link)}
+              className="text-xs md:text-xs text-gray-300 select-none p-1 rounded-md bg-github opacity-45 dark:opacity-75"
+            >
               {timeInterval[1] ? `${timeInterval[0]} - ${timeInterval[1]}` : timeInterval[0]}
             </p>
-            {docs && docs.length >= 2 && (
-              <p onClick={handleClick(docs[1])} onMouseDown={handleClick(docs[1])} className="text-xs md:text-xs text-blue-500 hover:text-blue-700 duration-100 select-none p-1 rounded-md">
-                {docs[0]}
-              </p>
-            )}
+            <div className="flex flex-row items-center gap-2">
+              {demo && demo.length >= 2 && (
+                <p
+                  onClick={handleClick(demo[1])}
+                  onMouseDown={handleClick(demo[1])}
+                  className="text-xs md:text-xs text-blue-500 hover:text-blue-700 duration-100 select-none p-1 rounded-md"
+                >
+                  {demo[0]}
+                </p>
+              )}
+              {docs && docs.length >= 2 && (
+                <p
+                  onClick={handleClick(docs[1])}
+                  onMouseDown={handleClick(docs[1])}
+                  className="text-xs md:text-xs text-blue-500 hover:text-blue-700 duration-100 select-none p-1 rounded-md"
+                >
+                  {docs[0]}
+                </p>
+              )}
+            </div>
           </div>
           <p onClick={handleClick(link)} onMouseDown={handleClick(link)} className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-xs text-gray-800 dark:text-gray-300 select-none">
             {stack.map(item => (
