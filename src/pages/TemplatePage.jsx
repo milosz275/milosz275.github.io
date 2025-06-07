@@ -21,7 +21,7 @@ function TemplatePage({ children }) {
 					{theme === "dark" ? sun : moon}
 				</div>
 			</button>
-			<div className="bg-fixed bg-cover bg-full bg-sea-light dark:bg-sea-dark text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+			<div className="bg-radial from-gray-100 via-gray-200 to-gray-400 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 dark:text-stone-300 min-h-screen font-inter">
 				{children}
 			</div>
 		</>
