@@ -142,7 +142,7 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col mb-10 mx-auto ">
+    <div className="flex flex-col mb-10 mx-auto mt-36">
       <div className="flex justify-center items-center">
         <form
           id="submit-form"
@@ -157,11 +157,8 @@ function Contact() {
           <Title id="0">
             Contact
           </Title>
-          <p className="text-left text-gray-800 dark:text-gray-300 mb-2">
-            Feel free to reach out to me for any inquiries or just to say hi! 🌟
-          </p>
           <p className="text-left text-gray-800 dark:text-gray-300 mb-5">
-            If you&apos;d want to cooperate, please fill out the form below. I&apos;ll get back to you as soon as possible. Thank you! 🚀
+            If you&apos;d want to cooperate, please fill out the form below. I&apos;ll get back to you as soon as possible.
           </p>
           <input
             type="text"
