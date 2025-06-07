@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import TemplatePage from "../pages/TemplatePage";
 import Intro from "../components/Intro";
 import Portfolio from "../components/Portfolio";
-import Timeline from "../components/Timeline";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { setCookie } from "../functions/setCookie";
@@ -86,9 +85,6 @@ function MainPage() {
 				</div>
 				<div id="portfolio">
 					<Portfolio />
-				</div>
-				<div id="timeline">
-					<Timeline />
 				</div>
 				<div id="contact">
 					<Contact />
