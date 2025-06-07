@@ -16,6 +16,7 @@ export default {
         "accent": "1e91ea",
       },
       backgroundImage: {
+        "radial": "radial-gradient(var(--tw-gradient-stops))",
         "rainforest-light": "linear-gradient(to right bottom, rgba(215, 230, 220, 0.92), rgba(215, 210, 220, 0.93)), url('/assets/rainforest-hiva.jpg')",
         "rainforest-dark": "linear-gradient(to right bottom, rgba(30, 20, 30, 0.9), rgba(20, 30, 30, 0.9)), url('/assets/rainforest-hiva.jpg')",
         "sea-light": "linear-gradient(to right bottom, rgba(226, 229, 245, 0.91), rgba(210, 210, 240, 0.93)), url('/assets/sea.jpg')",
