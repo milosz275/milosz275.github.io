@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import PortfolioItem from "./PortfolioItem";
 import portfolio from "../data/portfolio";
 import Title from "./Title";
-import { LINKS_URL, REPOS_URL } from "../urls";
 
 function Portfolio() {
   const navigate = useNavigate();
@@ -28,25 +27,7 @@ function Portfolio() {
             Projects
           </Title>
           <p className="text-md mb-4">
-            Welcome to Portfolio, where each endeavor is crafted with meticulous attention and care. With each new project, I strive not only to innovate but also to document the journey, capturing the essence of every creation. Explore how each endeavor showcases my dedication to precision and creativity. Feel free to filter them by stack.
-          </p>
-          <p className="text-md mb-4">
-            Explore my projects by GitHub repo using{" "}
-            <span
-              onClick={() => navigate(REPOS_URL)}
-              className="cursor-pointer text-cyan-600 hover-underline-animation underline-offset-2 decoration-1 decoration-purple-400"
-            >
-              repos subpage
-            </span>.
-          </p>
-          <p className="text-md">
-            Take a look at {" "}
-            <span
-              onClick={() => navigate(LINKS_URL)}
-              className="cursor-pointer text-cyan-600 hover-underline-animation underline-offset-2 decoration-1 decoration-purple-400"
-            >
-              links subpage
-            </span> to watch deployed projects only.
+            Welcome to my developer portfolio, where each project is listed along with brief description, time of development, stack and documentation. Explore them below.
           </p>
         </div>
       </div>
@@ -89,6 +70,7 @@ function Portfolio() {
               imgUrl={project.imgUrl}
               timeInterval={project.timeInterval}
               docs={project.docs}
+              demo={project.demo}
               stack={project.stack}
               link={project.link}
             />
