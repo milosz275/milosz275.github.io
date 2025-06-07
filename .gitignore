@@ -24,3 +24,7 @@ dist-ssr
 
 # Notes
 .notes
+
+.vscode/settings.json
+.idea/
+.vs/
