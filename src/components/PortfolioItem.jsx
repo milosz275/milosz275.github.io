@@ -20,10 +20,16 @@ const handleClick = (link) => (event) => {
 };
 
 function PortfolioItem({ title, description, timeInterval, docs, demo, imgUrl, stack, link }) {
-  const timeoutId = useRef(null);
-  const [src, setSrc] = useState(imgUrl);
-  const [isFallback, setIsFallback] = useState(false);
+  const [mainLoaded, setMainLoaded] = useState(false);
   const fallbackImgUrl = "assets/undraw_programming_re_kg9v.svg";
+
+  useEffect(() => {
+    setMainLoaded(false);
+    const img = new window.Image();
+    img.src = imgUrl;
+    img.onload = () => setMainLoaded(true);
+    img.onerror = () => setMainLoaded(false);
+  }, [imgUrl]);
 
   const handleError = () => {
     setSrc(fallbackImgUrl);
@@ -59,14 +65,22 @@ function PortfolioItem({ title, description, timeInterval, docs, demo, imgUrl, s
           </p>
         </div>
         <div>
-          <img
-            onClick={handleClick(link)}
-            onMouseDown={handleClick(link)}
-            src={src}
-            alt={title}
-            onError={handleError}
-            className={`w-full h-48 mb-4 object-cover object-center bg-transparent rounded-lg shadow-lg ${isFallback ? 'backdrop-brightness-50' : ''}`}
-          />
+          <div>
+            <div className="relative w-full h-48 mb-4 cursor-default">
+              <img
+                src={fallbackImgUrl}
+                alt="Fallback"
+                className={`absolute top-0 left-0 w-full h-full object-cover object-center bg-transparent rounded-lg shadow-lg transition-opacity duration-700 ${mainLoaded ? 'opacity-0' : 'opacity-100'}`}
+                draggable={false}
+              />
+              <img
+                src={imgUrl}
+                alt={title}
+                className={`absolute top-0 left-0 w-full h-full object-cover object-center bg-transparent rounded-lg shadow-lg transition-opacity duration-700 ${mainLoaded ? 'opacity-100' : 'opacity-0'}`}
+                draggable={false}
+              />
+            </div>
+          </div>
           <div className="flex flex-row items-center justify-between pb-3">
             <p
               onClick={handleClick(link)}
