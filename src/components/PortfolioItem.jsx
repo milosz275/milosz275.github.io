@@ -42,15 +42,6 @@ function PortfolioItem({ title, description, timeInterval, docs, demo, imgUrl, s
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
-  useEffect(() => {
-    return () => {
-      if (timeoutId.current) {
-        clearTimeout(timeoutId.current);
-      }
-    };
-  }, []);
-
   return (
     <div
       className="bg-transparent backdrop-blur-lg rounded-lg shadow-lg overflow-hidden \
