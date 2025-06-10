@@ -57,7 +57,7 @@ function PortfolioItem({ title, description, timeInterval, docs, demo, imgUrl, s
         </div>
         <div>
           <div>
-            <div className="relative w-full h-48 mb-4 cursor-default">
+            <div className="relative w-full h-48 mb-4 cursor-default select-none">
               <img
                 src={fallbackImgUrl}
                 alt="Fallback"
