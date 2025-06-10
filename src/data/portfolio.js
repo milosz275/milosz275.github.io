@@ -47,9 +47,9 @@ export default [
         id: 5,
         title: "Secure File Storage",
         description: "Safe encrypted file storage solution developed in Python using Flask. It combines strong encryption, modular architecture, logging and basic access control. Follows best DevOps practices and implements complex CI/CD pipeline using GitHub Actions.",
-        timeInterval: ["May 2025"],
+        timeInterval: ["May 2025", "June 2025"],
         docs: ["Docs", "https://milosz275.github.io/secure-file-storage"],
-        demo: ["PyPI", "https://pypi.org/project/secure-file-storage/"],
+        demo: ["PyPI", "https://pypi.org/project/secure-file-storage-milosz275/"],
         stack: ["Python3", "Flask", "fernet", "PyPI", "Docker", "SQLite3", "MkDocs"],
         imgUrl: "/assets/secure-file-storage.png",
         link: "https://github.com/milosz275/secure-file-storage"
